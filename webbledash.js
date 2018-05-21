@@ -13,6 +13,19 @@ function d (name) {
     return $("[data-wdash="+name+"]");
 }
 
+// function for removing spaces at the start or at the end of a string
+function remove_unneeded_spaces (string) {
+    var first_char = string.substr(0,1);
+    var last_char = string.substr(-1);
+    if (first_char === " ") {
+        string = string.substr(1);
+    }
+    if (last_char === " ") {
+        string = string.substr(0, string.length - 1);
+    }
+    return string;
+}
+
 
 
 // function for when the document is loaded
@@ -60,6 +73,24 @@ $( document ).ready(function () {
     $(d("large-quote")).each(function () {
         // wrap the element in a wrapper to align it in the center
         $( this ).wrap( "<div data-ddash='large-quote-container'></div>" );
+        // add a name to the quote if given
+        // check if a name is given
+        var html = $( this ).html();
+        if (html.split("-").length == 2) {
+            // name is given correctly
+            var content = remove_unneeded_spaces(html.split("-")[0]);
+            var name = remove_unneeded_spaces(html.split("-")[1]);
+            $( this ).html(
+                "<span data-ddash='large-quote-main-quote'>"+content+"</span>"+
+                "<span data-ddash='large-quote-name'>"+name+"</span>"
+            );
+        } else {
+            // name not given or not given correctly
+            var content = remove_unneeded_spaces(html);
+            $( this ).html(
+                "<span data-ddash='large-quote-main-quote'>"+content+"</span>"
+            );
+        }
     });
 
 });

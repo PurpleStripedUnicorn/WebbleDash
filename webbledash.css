@@ -61,7 +61,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2em 0; /* margin on top and bottom */
+    margin: 3em 0; /* margin on top and bottom */
     padding: 0 1vw; /* padding on left and right, proportional to window width */
 }
 /* original quote element */
@@ -71,15 +71,28 @@
     flex-shrink: 1;
     flex-basis: 900px;
     color: grey; /* make text grey to make it stand out */
-    font-size: 3em; /* make the text very large */
     font-style: italic;
-    font-family: serif; /* beautify the text by making it serif */
     text-align: center;
 }
 /* add quote marks */
-[data-wdash=large-quote]::before {
+[data-ddash=large-quote-main-quote]::before {
     content: "\“";
 }
-[data-wdash=large-quote]::after {
+[data-ddash=large-quote-main-quote]::after {
     content: "\”";
+}
+[data-ddash=large-quote-name]::before {
+    content: "- ";
+}
+[data-ddash=large-quote-main-quote],
+[data-ddash=large-quote-name] {
+    display: block;
+    font-family: serif !important; /* beautify the text by making it serif */
+}
+[data-ddash=large-quote-name] {
+    font-size: 1.5em;
+    margin-top: .7em;
+}
+[data-ddash=large-quote-main-quote] {
+    font-size: 3em; /* make the text very large */
 }
