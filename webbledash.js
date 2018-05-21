@@ -1,8 +1,10 @@
 /*
 
-WebbleDash
-Please use with care, may contain bugs
-Made by PurpleStripedUnicorn
+--- WebbleDash ---
+Please use with care, this version may contain bugs
+WebbleDash is still in the early stages of development
+
+WebbleDash was made by PurpleStripedUnicorn
 
 */
 

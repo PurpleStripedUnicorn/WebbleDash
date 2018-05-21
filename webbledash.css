@@ -7,7 +7,7 @@
 
 
 
-/* textboxes */
+/* [data-wdash=textbox] */
 [data-ddash=textbox-wrapper] {
     display: inline-block;
     position: relative;
