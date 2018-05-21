@@ -1,6 +1,6 @@
 /*
 
-WebbleDash v1.0.0
+WebbleDash
 Please use with care, may contain bugs
 Made by PurpleStripedUnicorn
 
