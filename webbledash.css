@@ -1,6 +1,6 @@
 /* global styles for all ddash elements */
 [data-ddash] {
-    font-family: sans-serif;
+    font-family: sans-serif; /* make all elements sans-serif */
 }
 
 
