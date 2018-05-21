@@ -1,0 +1,52 @@
+/* global styles for all ddash elements */
+[data-ddash] {
+    font-family: sans-serif;
+}
+
+
+
+
+
+/* textboxes */
+[data-ddash=textbox-wrapper] {
+    display: inline-block;
+    position: relative;
+}
+[data-ddash=textbox-wrapper] input[type=text] {
+    border-radius: 4px;
+    border: 2px solid #d0d0d0;
+    box-sizing: border-box;
+    outline: none;
+    padding: 11px 15px;
+    font-size: 1.1em;
+    transition: all .1s;
+    color: #6f6f6f;
+    font-family: sans-serif;
+}
+[data-ddash=textbox-wrapper]:hover input[type=text] {
+    border-color: #c0c0c0;
+}
+[data-ddash=textbox-wrapper] input[type=text]:focus {
+    border-color: #a0a0a0;
+    color: black;
+}
+[data-ddash=textbox-wrapper] input[type=text]:focus + [data-ddash=textbox-placeholder] {
+    color: #909090;
+}
+[data-ddash=textbox-wrapper]:hover [data-ddash=textbox-placeholder] {
+    color: #b0b0b0;
+}
+[data-ddash=textbox-wrapper][data-ddash-placeholder-shown=false] [data-ddash=textbox-placeholder] {
+    display: none;
+}
+
+[data-ddash=textbox-placeholder] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 17px;
+    font-size: 0.8em;
+    letter-spacing: .3px;
+    color: #c0c0c0;
+    display: block;
+}
