@@ -15,14 +15,18 @@ function d (name) {
 
 // function for removing spaces at the start or at the end of a string
 function remove_unneeded_spaces (string) {
+    // define first and last character to use later
     var first_char = string.substr(0,1);
     var last_char = string.substr(-1);
+    // check if first character is a space
     if (first_char === " ") {
         string = string.substr(1);
     }
+    // check if last character is a space
     if (last_char === " ") {
         string = string.substr(0, string.length - 1);
     }
+    // return result with last and first space removed
     return string;
 }
 
