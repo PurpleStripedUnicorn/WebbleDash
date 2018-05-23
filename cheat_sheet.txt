@@ -3,8 +3,9 @@
 <html-tag data-wdash="***ELEMENT***"> to use WebbleDash correctly
 
 
-ELEMENT             | DESCRIPTION                                                 | USE ON
+ELEMENT             | DESCRIPTION                                                 | CAN BE USED ON
 --------------------+-------------------------------------------------------------+---------------------------
 textbox             | styled input text                                           | <input type="text">
-large-quote         | styled large quote in the middle of the screen              | <div>
+large-quote         | styled large quote in the middle of the screen              | <div>, <span>
+inline-quotes       | styled small inline quote                                   | <span>
 switch              | styled switch in stead of checkbox                          | <input type="checkbox">

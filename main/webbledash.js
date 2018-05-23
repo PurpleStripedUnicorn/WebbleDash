@@ -8,6 +8,11 @@ WebbleDash was made by PurpleStripedUnicorn
 
 */
 
+
+// -----
+// functions
+// -----
+
 // function for searching for wDash elements
 function d (name) {
     return $("[data-wdash="+name+"]");
@@ -40,6 +45,15 @@ function remove_unneeded_spaces (string) {
 }
 
 
+
+
+
+
+
+
+// -----
+// loading script
+// -----
 
 // function for when the document is loaded
 $( document ).ready(function () {
@@ -94,14 +108,42 @@ $( document ).ready(function () {
             var content = remove_unneeded_spaces(html.split("-")[0]);
             var name = remove_unneeded_spaces(html.split("-")[1]);
             $( this ).html(
-                "<span data-ddash='large-quote-main-quote'>"+content+"</span>"+
-                "<span data-ddash='large-quote-name'>"+name+"</span>"
+                "<span data-ddash='large-quote-main-quote'>\“"+content+"\”</span>"+
+                "<span data-ddash='large-quote-name'>- "+name+"</span>"
             );
         } else {
             // name not given or not given correctly
             var content = remove_unneeded_spaces(html);
             $( this ).html(
                 "<span data-ddash='large-quote-main-quote'>"+content+"</span>"
+            );
+        }
+    });
+
+
+
+
+
+    // inline quote
+    $(d("inline-quote")).each(function () {
+        // check if the element is a <div>
+        // if so, change it to <span>
+        // add a name to the quote if given
+        // check if a name is given
+        var html = $( this ).html();
+        if (html.split("-").length == 2) {
+            // name is given correctly
+            var content = remove_unneeded_spaces(html.split("-")[0]);
+            var name = remove_unneeded_spaces(html.split("-")[1]);
+            $( this ).html(
+                "<span data-ddash='inline-quote-main-quote'>\“"+content+"\”</span>"+
+                "<span data-ddash='inline-quote-name'>&nbsp;- "+name+"</span>"
+            );
+        } else {
+            // name not given or not given correctly
+            var content = remove_unneeded_spaces(html);
+            $( this ).html(
+                "<span data-ddash='inline-quote-main-quote'>"+content+"</span>"
             );
         }
     });

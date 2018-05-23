@@ -24,11 +24,21 @@ This file might not contain all of the features in WebbleDash!!!
 
     <style>
 
-    /* example style for small titles
+    /* example style for small titles and body styling
     NOT PART OF WEBBLEDASH! */
+    body {
+        padding: 0;
+        margin: 5px;
+        font-family: sans-serif;
+        font-size: 17px;
+    }
     h3.small_title {
         font-family: sans-serif;
         font-size: 1.1em;
+        background-color: #f0f0f0;
+        color: #666;
+        padding: 15px 23px;
+        border-radius: 8px;
     }
 
     </style>
@@ -49,7 +59,16 @@ This file might not contain all of the features in WebbleDash!!!
         large quote from someone to show in the middle of the screen
     -->
     <h3 class="small_title">Large quote [data-wdash=large-quote]</h3>
-    <div data-wdash="large-quote">I want to write in JavaScript - PurpleStripedUnicorn</div>
+    <span data-wdash="large-quote">I want to write in JavaScript - PurpleStripedUnicorn</span>
+
+    <!--
+        [data-wdash=inline-quote]
+        default quote to use inline
+    -->
+    <h3 class="small_title">Inline quote [data-wdash=inline-quote]</h3>
+    <p>
+        As you can see in the follwing quote: <span data-wdash="inline-quote">I realized it was 4:07 pm - PurpleStripedUnicorn</span>.
+    </p>
 
     <!--
         [data-wdash=switch]

@@ -70,31 +70,45 @@
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 900px;
-    color: grey; /* make text grey to make it stand out */
-    font-style: italic;
+    color: #808080; /* make text grey to make it stand out */
     text-align: center;
-}
-/* add quote marks */
-[data-ddash=large-quote-main-quote]::before {
-    content: "\“";
-}
-[data-ddash=large-quote-main-quote]::after {
-    content: "\”";
-}
-[data-ddash=large-quote-name]::before {
-    content: "- ";
 }
 [data-ddash=large-quote-main-quote],
 [data-ddash=large-quote-name] {
     display: block;
-    font-family: serif !important; /* beautify the text by making it serif */
+    /* font-family: serif !important; /* beautify the text by making it serif */ */
 }
 [data-ddash=large-quote-name] {
     font-size: 1.5em;
     margin-top: .7em;
+    color: #b0b0b0;
 }
 [data-ddash=large-quote-main-quote] {
     font-size: 3em; /* make the text very large */
+    font-family: serif !important;
+    font-style: italic;
+}
+
+
+
+
+
+/* inline quotes */
+/* original quote element */
+[data-wdash=inline-quote] {
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 900px;
+    color: #808080; /* make text grey to make it stand out */
+    text-align: center;
+}
+[data-ddash=inline-quote-main-quote],
+[data-ddash=inline-quote-name] {
+    display: inline-block;
+    font-family: serif !important; /* beautify the text by making it serif */
+    font-style: italic;
+    color: #b0b0b0;
 }
 
 
@@ -132,9 +146,9 @@
 /* check visible checkbox */
 [data-wdash=switch]:checked + [data-ddash=switch] {
     background-color: #7de37d;
-    border-color: #5ed65e;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 [data-wdash=switch]:checked + [data-ddash=switch] > div {
     left: 50px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.968);
 }
