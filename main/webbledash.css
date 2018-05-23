@@ -7,7 +7,7 @@
 
 
 
-/* [data-wdash=textbox] */
+/* textboxes */
 [data-ddash=textbox-wrapper] {
     display: inline-block;
     position: relative;
@@ -107,14 +107,15 @@
 }
 /* actual visible checkbox */
 [data-wdash=switch] + [data-ddash=switch] {
-    width: 70px;
-    height: 30px;
+    width: 84px;
+    height: 36px;
     box-sizing: border-box;
-    background-color: #eaeaea;
+    /* background-color: #eaeaea; */
     border-radius: 7px;
     transition: all .17s;
     position: relative;
     display: inline-block;
+    border: 3px solid #d0d0d0;
 }
 /* block inside switch */
 [data-wdash=switch] + [data-ddash=switch] > div {
@@ -131,8 +132,9 @@
 /* check visible checkbox */
 [data-wdash=switch]:checked + [data-ddash=switch] {
     background-color: #7de37d;
+    border-color: #5ed65e;
 }
 [data-wdash=switch]:checked + [data-ddash=switch] > div {
-    left: 43px;
+    left: 50px;
     background-color: white;
 }
