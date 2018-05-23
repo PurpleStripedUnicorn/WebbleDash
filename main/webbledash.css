@@ -96,3 +96,43 @@
 [data-ddash=large-quote-main-quote] {
     font-size: 3em; /* make the text very large */
 }
+
+
+
+
+
+/* checkbox */
+[data-wdash=switch] {
+    display: none;
+}
+/* actual visible checkbox */
+[data-wdash=switch] + [data-ddash=switch] {
+    width: 70px;
+    height: 30px;
+    box-sizing: border-box;
+    background-color: #eaeaea;
+    border-radius: 7px;
+    transition: all .17s;
+    position: relative;
+    display: inline-block;
+}
+/* block inside switch */
+[data-wdash=switch] + [data-ddash=switch] > div {
+    background-color: #cecece;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: inherit;
+    border-radius: 5px;
+}
+/* check visible checkbox */
+[data-wdash=switch]:checked + [data-ddash=switch] {
+    background-color: #7de37d;
+}
+[data-wdash=switch]:checked + [data-ddash=switch] > div {
+    left: 43px;
+    background-color: white;
+}

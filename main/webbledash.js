@@ -13,6 +13,15 @@ function d (name) {
     return $("[data-wdash="+name+"]");
 }
 
+// function to check or uncheck a webbledash checkbox
+function wdash_switch_change_prop (index) {
+    if ($( "[data-ddash-switch-index="+index+"]" ).is( ":checked" )) {
+        $( "[data-ddash-switch-index="+index+"]" ).prop( "checked", false );
+    } else {
+        $( "[data-ddash-switch-index="+index+"]" ).prop( "checked", true );
+    }
+}
+
 // function for removing spaces at the start or at the end of a string
 function remove_unneeded_spaces (string) {
     // define first and last character to use later
@@ -95,6 +104,17 @@ $( document ).ready(function () {
                 "<span data-ddash='large-quote-main-quote'>"+content+"</span>"
             );
         }
+    });
+
+
+
+
+
+    // switches
+    // replace all dash checkboxes with proper styled ones
+    $( "[data-wdash=switch]" ).each(function (index) {
+        $( this ).after( "<div data-ddash='switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
+        $( this ).attr( "data-ddash-switch-index", ""+index+"" );
     });
 
 });
