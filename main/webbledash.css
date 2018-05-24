@@ -13,7 +13,8 @@
 
 /* textboxes */
 [data-ddash=textbox-wrapper] {
-    display: inline-block;
+    display: block;
+    margin: 2px 0;
     position: relative;
 }
 [data-ddash=textbox-wrapper] input[type=text],
