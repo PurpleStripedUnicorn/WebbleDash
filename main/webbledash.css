@@ -129,7 +129,7 @@
     height: 36px;
     box-sizing: border-box;
     border-radius: 7px;
-    transition: background-color .17s;
+    transition: all .17s;
     position: relative;
     display: inline-block;
     border: 2px solid #d0d0d0;
@@ -144,7 +144,7 @@
     left: 5px;
     top: 50%;
     transform: translateY(-50%);
-    transition: left .17s, background-color .17s;
+    transition: inherit;
     border-radius: 5px;
 }
 /* check visible switch */
@@ -160,6 +160,12 @@
 [data-wdash=switch]:checked + [data-ddash=switch]:hover {
     border-color: rgba(255, 255, 255, .55);
 }
+[data-wdash=switch]:checked + [data-ddash=switch]:hover > div {
+    background-color: rgba(255, 255, 255, .8);
+}
 [data-wdash=switch]:not(:checked) + [data-ddash=switch]:hover {
     border-color: rgba(208, 208, 208, .7);
+}
+[data-wdash=switch]:not(:checked) + [data-ddash=switch]:hover > div {
+    background-color: rgba(208, 208, 208, .85);
 }
