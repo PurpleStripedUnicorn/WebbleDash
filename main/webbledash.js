@@ -14,9 +14,42 @@ WebbleDash was made by PurpleStripedUnicorn
 // -----
 
 // function for searching for wDash elements
-function d (name) {
-    // return the elements with the property wdash as the name of the input
-    return $("[data-wdash="+name+"]");
+// can be used as quick way instead of typing $( "[data-wdash=***]" )
+function d (name, elements /* elements are optional */) {
+
+    // check if elements are given
+    // if not, set empty string for elements
+    if (typeof elements === "undefined") { elements = ""; }
+
+    // get all of the separate elements in the elements string
+    var elements_list = elements.split(",");
+
+    // if there are elements given, loop though them
+    if (elements_list.length > 0) {
+
+        // loop through elements to add [data-wdash=name] to it
+        var result_elements = "";
+        for (i = 0; i < elements_list.length; i++) {
+            // add element and name to list
+            result_elements += ","+elements_list[i]+"[data-wdash="+name+"]";
+        }
+
+        // remove the first comma in the result_elements string, added in the first iteration of the for loop
+        result_elements = result_elements.substr(1);
+
+        console.log($(""+result_elements))
+
+        // return all of the elements with [data-wdash=name] added to them
+        return $(""+result_elements+"");
+
+    } else {
+
+        // no elements given, just return
+        // return the elements with the property wdash as the name of the input
+        return $("[data-wdash="+name+"]");
+
+    }
+
 }
 
 // function to check or uncheck a webbledash checkbox
@@ -67,7 +100,7 @@ $( document ).ready(function () {
     // -----
     // textboxes
     // -----
-    d("textbox").each(function () {
+    d("textbox", "input[type=text],input[type=password],input[type=search],input[type=email]").each(function () {
         $( this ).wrap("<div data-ddash='textbox-wrapper' data-ddash-placeholder-shown='true'></div>");
         // check if the input has a placeholder
         if ($( this ).is("[placeholder]")) {
@@ -107,7 +140,7 @@ $( document ).ready(function () {
     // -----
     // large quote
     // -----
-    $(d("large-quote")).each(function () {
+    $(d("large-quote", "div,span")).each(function () {
         // wrap the element in a wrapper to align it in the center
         $( this ).wrap( "<div data-ddash='large-quote-container'></div>" );
         // add a name to the quote if given
@@ -144,7 +177,7 @@ $( document ).ready(function () {
     // -----
     // inline quote
     // -----
-    $(d("inline-quote")).each(function () {
+    $(d("inline-quote", "span")).each(function () {
         // check if the element is a <div>
         // if so, change it to <span>
         // add a name to the quote if given
@@ -182,11 +215,11 @@ $( document ).ready(function () {
     // switches
     // -----
     // replace all dash checkboxes with proper styled ones
-    $( "[data-wdash=switch]" ).each(function (index) {
+    d("switch", "input[type=checkbox]").each(function (index) {
         // insert the visible switch after the real checkbox that is being used
         $( this ).after( "<div data-ddash='switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
         // set the index of the switch to use later when clicking on the element
-        $( this ).attr( "data-ddash-switch-index", ""+index+"" );
+        $( this ).attr( "data-ddash-switch-index", String(index) );
     });
 
 });
