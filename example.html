@@ -24,15 +24,27 @@ This file might not contain all of the features in WebbleDash!!!
 
     <style>
 
-    /* example style for small titles and body styling
+    /* example style for titles and body styling
     NOT PART OF WEBBLEDASH! */
+    /* main body styling */
     body {
         padding: 0;
         margin: 5px;
         font-family: sans-serif;
         font-size: 17px;
     }
-    h3.small_title {
+    /* big titles */
+    h2 {
+        font-family: sans-serif;
+        font-size: 1.45em;
+        color: #444;
+        padding: 16px 26px;
+        border-bottom: 3px solid #444;
+        border-top: 3px solid #444;
+        margin-top: 4em;
+    }
+    /* small titles */
+    h3 {
         font-family: sans-serif;
         font-size: 1.1em;
         background-color: #f0f0f0;
@@ -46,35 +58,22 @@ This file might not contain all of the features in WebbleDash!!!
 </head>
 <body>
 
+    <!-- form elements -->
+    <h2>Form elements</h2>
+
     <!--
         [data-wdash=textbox]
         basic textbox with WebbleDash styling
         placeholder will be shown in a different style
     -->
-    <h3 class="small_title">Basic textbox [data-wdash=textbox]</h3>
+    <h3>Basic textbox [data-wdash=textbox]</h3>
     <input data-wdash="textbox" type="text" placeholder="username" />
-
-    <!--
-        [data-wdash=large-quote]
-        large quote from someone to show in the middle of the screen
-    -->
-    <h3 class="small_title">Large quote [data-wdash=large-quote]</h3>
-    <span data-wdash="large-quote">I want to write in JavaScript - PurpleStripedUnicorn</span>
-
-    <!--
-        [data-wdash=inline-quote]
-        default quote to use inline
-    -->
-    <h3 class="small_title">Inline quote [data-wdash=inline-quote]</h3>
-    <p>
-        As you can see in the follwing quote: <span data-wdash="inline-quote">I realized it was 4:07 pm - PurpleStripedUnicorn</span>.
-    </p>
 
     <!--
         [data-wdash=switch]
         custom switch for better design than the ordinary checkboxes
     -->
-    <h3 class="small_title">Custom switch [data-wdash=switch]</h3>
+    <h3>Custom switch [data-wdash=switch]</h3>
     <table>
         <tr>
             <td>
@@ -93,6 +92,25 @@ This file might not contain all of the features in WebbleDash!!!
             </td>
         </tr>
     </table>
+
+    <!-- quote elements -->
+    <h2>Quotes</h2>
+
+    <!--
+        [data-wdash=large-quote]
+        large quote from someone to show in the middle of the screen
+    -->
+    <h3>Large quote [data-wdash=large-quote]</h3>
+    <span data-wdash="large-quote">I want to write in JavaScript - PurpleStripedUnicorn</span>
+
+    <!--
+        [data-wdash=inline-quote]
+        default quote to use inline
+    -->
+    <h3>Inline quote [data-wdash=inline-quote]</h3>
+    <p>
+        As you can see in the follwing quote: <span data-wdash="inline-quote">I realized it was 4:07 pm - PurpleStripedUnicorn</span>.
+    </p>
 
 </body>
 </html>
