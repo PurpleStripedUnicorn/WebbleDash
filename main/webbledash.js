@@ -15,29 +15,35 @@ WebbleDash was made by PurpleStripedUnicorn
 
 // function for searching for wDash elements
 function d (name) {
+    // return the elements with the property wdash as the name of the input
     return $("[data-wdash="+name+"]");
 }
 
 // function to check or uncheck a webbledash checkbox
 function wdash_switch_change_prop (index) {
+    // check if the switch is already checked or not
     if ($( "[data-ddash-switch-index="+index+"]" ).is( ":checked" )) {
+        // uncheck the switch
         $( "[data-ddash-switch-index="+index+"]" ).prop( "checked", false );
     } else {
+        // check the switch
         $( "[data-ddash-switch-index="+index+"]" ).prop( "checked", true );
     }
 }
 
 // function for removing spaces at the start or at the end of a string
 function remove_unneeded_spaces (string) {
-    // define first and last character to use later
+    // define first and last character of the input string to use later
     var first_char = string.substr(0,1);
     var last_char = string.substr(-1);
     // check if first character is a space
     if (first_char === " ") {
+        // set the string to be the same as before without the first character
         string = string.substr(1);
     }
     // check if last character is a space
     if (last_char === " ") {
+        // set the string to be the same as before without the last character
         string = string.substr(0, string.length - 1);
     }
     // return result with last and first space removed
@@ -96,7 +102,9 @@ $( document ).ready(function () {
 
 
 
+    // -----
     // large quote
+    // -----
     $(d("large-quote")).each(function () {
         // wrap the element in a wrapper to align it in the center
         $( this ).wrap( "<div data-ddash='large-quote-container'></div>" );
@@ -105,17 +113,24 @@ $( document ).ready(function () {
         var html = $( this ).html();
         if (html.split("-").length == 2) {
             // name is given correctly
+            // remove spaces at the start and end of the content and name
+            //   this is for better display later
             var content = remove_unneeded_spaces(html.split("-")[0]);
             var name = remove_unneeded_spaces(html.split("-")[1]);
+            // change the html of the large-quote to
+            //   contain content and name in the right way
             $( this ).html(
+                // content
                 "<span data-ddash='large-quote-main-quote'>\“"+content+"\”</span>"+
+                // name
                 "<span data-ddash='large-quote-name'>- "+name+"</span>"
             );
         } else {
             // name not given or not given correctly
             var content = remove_unneeded_spaces(html);
             $( this ).html(
-                "<span data-ddash='large-quote-main-quote'>"+content+"</span>"
+                // content
+                "<span data-ddash='large-quote-main-quote'>\“"+content+"\”</span>"
             );
         }
     });
@@ -124,7 +139,9 @@ $( document ).ready(function () {
 
 
 
+    // -----
     // inline quote
+    // -----
     $(d("inline-quote")).each(function () {
         // check if the element is a <div>
         // if so, change it to <span>
@@ -133,17 +150,24 @@ $( document ).ready(function () {
         var html = $( this ).html();
         if (html.split("-").length == 2) {
             // name is given correctly
+            // remove the spaces at the end and the start of the name and contant of the quote
+            //  this is for better display later
             var content = remove_unneeded_spaces(html.split("-")[0]);
             var name = remove_unneeded_spaces(html.split("-")[1]);
+            // change the html of the current inline-quote element
             $( this ).html(
+                // content
                 "<span data-ddash='inline-quote-main-quote'>\“"+content+"\”</span>"+
+                // name
                 "<span data-ddash='inline-quote-name'>&nbsp;- "+name+"</span>"
             );
         } else {
             // name not given or not given correctly
             var content = remove_unneeded_spaces(html);
+            // only change the html of the inline-quote element to show the quote
             $( this ).html(
-                "<span data-ddash='inline-quote-main-quote'>"+content+"</span>"
+                // contant
+                "<span data-ddash='inline-quote-main-quote'>\“"+content+"\”</span>"
             );
         }
     });
@@ -152,10 +176,14 @@ $( document ).ready(function () {
 
 
 
+    // -----
     // switches
+    // -----
     // replace all dash checkboxes with proper styled ones
     $( "[data-wdash=switch]" ).each(function (index) {
+        // insert the visible switch after the real checkbox that is being used
         $( this ).after( "<div data-ddash='switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
+        // set the index of the switch to use later when clicking on the element
         $( this ).attr( "data-ddash-switch-index", ""+index+"" );
     });
 
