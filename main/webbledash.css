@@ -2,6 +2,10 @@
 [data-ddash] {
     font-family: sans-serif; /* make all elements sans-serif by default */
 }
+/* global styles for all wdash elements */
+[data-wdash] {
+    font-family: sans-serif; /* make all elements sans-serif by default */
+}
 
 
 
