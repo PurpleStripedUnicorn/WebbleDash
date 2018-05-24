@@ -69,7 +69,7 @@
     display: block;
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 900px;
+    flex-basis: 700px;
     color: #808080; /* make text grey to make it stand out */
     text-align: center;
 }
