@@ -64,7 +64,9 @@ function remove_unneeded_spaces (string) {
 // function for when the document is loaded
 $( document ).ready(function () {
 
+    // -----
     // textboxes
+    // -----
     d("textbox").each(function () {
         $( this ).wrap("<div data-ddash='textbox-wrapper' data-ddash-placeholder-shown='true'></div>");
         // check if the input has a placeholder
