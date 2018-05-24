@@ -119,17 +119,17 @@
 [data-wdash=switch] {
     display: none;
 }
-/* actual visible checkbox */
+/* actual visible switch */
 [data-wdash=switch] + [data-ddash=switch] {
     width: 84px;
     height: 36px;
     box-sizing: border-box;
-    /* background-color: #eaeaea; */
     border-radius: 7px;
-    transition: all .17s;
+    transition: background-color .17s;
     position: relative;
     display: inline-block;
-    border: 3px solid #d0d0d0;
+    border: 2px solid #d0d0d0;
+    cursor: pointer;
 }
 /* block inside switch */
 [data-wdash=switch] + [data-ddash=switch] > div {
@@ -137,18 +137,25 @@
     height: 24px;
     width: 24px;
     position: absolute;
-    left: 3px;
+    left: 5px;
     top: 50%;
     transform: translateY(-50%);
-    transition: inherit;
+    transition: left .17s, background-color .17s;
     border-radius: 5px;
 }
-/* check visible checkbox */
+/* check visible switch */
 [data-wdash=switch]:checked + [data-ddash=switch] {
     background-color: #7de37d;
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, .35);
 }
 [data-wdash=switch]:checked + [data-ddash=switch] > div {
     left: 50px;
-    background-color: rgba(255, 255, 255, 0.968);
+    background-color: rgba(255, 255, 255, .9);
+}
+/* hover styles for switch */
+[data-wdash=switch]:checked + [data-ddash=switch]:hover {
+    border-color: rgba(255, 255, 255, .55);
+}
+[data-wdash=switch]:not(:checked) + [data-ddash=switch]:hover {
+    border-color: rgba(208, 208, 208, .7);
 }
