@@ -205,8 +205,8 @@ This is to only let the script decide which elements are valid for usage
 }
 /* actual visible switch */
 [data-ddash=checkbox] + [data-ddash=visible-checkbox] {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border-radius: 7px;
     transition: all .17s;
     position: relative;
