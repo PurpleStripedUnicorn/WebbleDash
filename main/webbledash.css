@@ -246,10 +246,6 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=checkbox]:not(:checked) + [data-ddash=visible-checkbox]:hover {
     border-color: rgba(208, 208, 208, .7);
 }
-/* svg of checkmark inside not checked checkbox */
-[data-ddash=checkbox]:not(:checked) + [data-ddash=visible-checkbox]:hover > svg path {
-    stroke: rgba(208, 208, 208, .4);
-}
 /* svg of checkmark inside checked checkbox */
 [data-ddash=checkbox]:checked + [data-ddash=visible-checkbox]:hover > svg path {
     stroke: rgba(255,255,255,.7);
