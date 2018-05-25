@@ -101,6 +101,9 @@ $( document ).ready(function () {
     // textboxes
     // -----
     d("textbox", "input[type=text],input[type=password],input[type=search],input[type=email]").each(function () {
+        // add ddash property to element
+        $( this ).attr( "data-ddash", "textbox" );
+        // add parent element to textbox
         $( this ).wrap("<div data-ddash='textbox-wrapper' data-ddash-placeholder-shown='true'></div>");
         // check if the input has a placeholder
         if ($( this ).is("[placeholder]")) {
@@ -141,6 +144,8 @@ $( document ).ready(function () {
     // large quote
     // -----
     $(d("large-quote", "div,span")).each(function () {
+        // add ddash property to element
+        $( this ).attr( "data-ddash", "large-quote" );
         // wrap the element in a wrapper to align it in the center
         $( this ).wrap( "<div data-ddash='large-quote-container'></div>" );
         // add a name to the quote if given
@@ -178,8 +183,8 @@ $( document ).ready(function () {
     // inline quote
     // -----
     $(d("inline-quote", "span")).each(function () {
-        // check if the element is a <div>
-        // if so, change it to <span>
+        // add ddash property to element
+        $( this ).attr( "data-ddash", "inline-quote" );
         // add a name to the quote if given
         // check if a name is given
         var html = $( this ).html();
@@ -216,6 +221,8 @@ $( document ).ready(function () {
     // -----
     // replace all dash checkboxes with proper styled ones
     d("switch", "input[type=checkbox]").each(function (index) {
+        // add ddash property to element
+        $( this ).attr( "data-ddash", "switch" );
         // insert the visible switch after the real checkbox that is being used
         $( this ).after( "<div data-ddash='switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
         // set the index of the switch to use later when clicking on the element

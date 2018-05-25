@@ -1,9 +1,13 @@
+/*
+
+In the styling only data-ddash is used,
+not data-wdash.
+This is to only let the script decide which elements are valid for usage
+
+*/
+
 /* global styles for all ddash elements */
 [data-ddash] {
-    font-family: sans-serif; /* make all elements sans-serif by default */
-}
-/* global styles for all wdash elements */
-[data-wdash] {
     font-family: sans-serif; /* make all elements sans-serif by default */
 }
 
@@ -17,10 +21,7 @@
     margin: 2px 0;
     position: relative;
 }
-[data-ddash=textbox-wrapper] input[type=text],
-[data-ddash=textbox-wrapper] input[type=password],
-[data-ddash=textbox-wrapper] input[type=search],
-[data-ddash=textbox-wrapper] input[type=email] {
+[data-ddash=textbox-wrapper] [data-ddash=textbox] {
     border-radius: 4px;
     border: 2px solid #d0d0d0;
     box-sizing: border-box;
@@ -31,23 +32,14 @@
     color: #6f6f6f;
     font-family: sans-serif;
 }
-[data-ddash=textbox-wrapper]:hover input[type=text],
-[data-ddash=textbox-wrapper]:hover input[type=password],
-[data-ddash=textbox-wrapper]:hover input[type=search],
-[data-ddash=textbox-wrapper]:hover input[type=email] {
+[data-ddash=textbox-wrapper]:hover [data-ddash=textbox] {
     border-color: #c0c0c0;
 }
-[data-ddash=textbox-wrapper] input[type=text]:focus,
-[data-ddash=textbox-wrapper] input[type=password]:focus,
-[data-ddash=textbox-wrapper] input[type=search]:focus,
-[data-ddash=textbox-wrapper] input[type=email]:focus {
+[data-ddash=textbox-wrapper] [data-ddash=textbox]:focus {
     border-color: #a0a0a0;
     color: black;
 }
-[data-ddash=textbox-wrapper] input[type=text]:focus + [data-ddash=textbox-placeholder],
-[data-ddash=textbox-wrapper] input[type=password]:focus + [data-ddash=textbox-placeholder],
-[data-ddash=textbox-wrapper] input[type=search]:focus + [data-ddash=textbox-placeholder],
-[data-ddash=textbox-wrapper] input[type=email]:focus + [data-ddash=textbox-placeholder] {
+[data-ddash=textbox-wrapper] [data-ddash=textbox]:focus + [data-ddash=textbox-placeholder], {
     color: #909090;
 }
 [data-ddash=textbox-wrapper]:hover [data-ddash=textbox-placeholder] {
@@ -82,7 +74,7 @@
     padding: 0 1vw; /* padding on left and right, proportional to window width */
 }
 /* original quote element */
-[data-wdash=large-quote] {
+[data-ddash=large-quote] {
     display: block;
     flex-grow: 0;
     flex-shrink: 1;
@@ -112,7 +104,7 @@
 
 /* inline quotes */
 /* original quote element */
-[data-wdash=inline-quote] {
+[data-ddash=inline-quote] {
     display: inline-block;
     flex-grow: 0;
     flex-shrink: 1;
