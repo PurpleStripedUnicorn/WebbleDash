@@ -282,11 +282,21 @@ $( document ).ready(function () {
         // add ddash property to element
         $( this ).attr( "data-ddash", "checkbox" );
 
+        var style_add = "";
+        if (Number($( this ).css( "height" ).replace("px", "")) > 15) {
+            var height = $( this ).css( "height" );
+            style_add = "width: "+height+"; height: "+height+";";
+        }
+        if (Number($( this ).css( "width" ).replace("px", "")) > 15) {
+            var width = $( this ).css( "width" );
+            style_add = "width: "+width+"; height: "+width+";";
+        }
+
         // insert the visible checkbox after the real checkbox that is being used
         $( this ).after(
-            "<div data-ddash='visible-checkbox' onclick='wdash_checkbox_change_prop("+index+")'>"+
-                "<svg biewbox='0 0 52 52'>"+
-                    "<path class='checkmark' fill='none' d='M7 18 l5 5 l13 -13' />"+
+            "<div style='"+style_add+"' data-ddash='visible-checkbox' onclick='wdash_checkbox_change_prop("+index+")'>"+
+                "<svg viewbox='0 0 52 52'>"+
+                    "<path class='checkmark' fill='none' d='M10 29 l8 8 l23 -23' />"+
                 "</svg>"+
             "</div>"
         );

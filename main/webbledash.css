@@ -207,7 +207,6 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=checkbox] + [data-ddash=visible-checkbox] {
     width: 36px;
     height: 36px;
-    box-sizing: border-box;
     border-radius: 7px;
     transition: all .17s;
     position: relative;
@@ -226,7 +225,7 @@ This is to only let the script decide which elements are valid for usage
   width: 56px;
   height: 56px;
   display: block;
-  stroke-width: 4px;
+  stroke-width: 7px;
   stroke: transparent;
   transition: inherit;
 }
