@@ -224,7 +224,7 @@ $( document ).ready(function () {
         // add ddash property to element
         $( this ).attr( "data-ddash", "switch" );
         // insert the visible switch after the real checkbox that is being used
-        $( this ).after( "<div data-ddash='switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
+        $( this ).after( "<div data-ddash='visible-switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
         // set the index of the switch to use later when clicking on the element
         $( this ).attr( "data-ddash-switch-index", String(index) );
     });

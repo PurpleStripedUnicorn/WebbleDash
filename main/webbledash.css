@@ -125,11 +125,11 @@ This is to only let the script decide which elements are valid for usage
 
 
 /* checkbox */
-[data-wdash=switch] {
+[data-ddash=switch] {
     display: none;
 }
 /* actual visible switch */
-[data-wdash=switch] + [data-ddash=switch] {
+[data-ddash=switch] + [data-ddash=visible-switch] {
     width: 84px;
     height: 36px;
     box-sizing: border-box;
@@ -141,7 +141,7 @@ This is to only let the script decide which elements are valid for usage
     cursor: pointer;
 }
 /* block inside switch */
-[data-wdash=switch] + [data-ddash=switch] > div {
+[data-ddash=switch] + [data-ddash=visible-switch] > div {
     background-color: #cecece;
     height: 24px;
     width: 24px;
@@ -153,24 +153,24 @@ This is to only let the script decide which elements are valid for usage
     border-radius: 5px;
 }
 /* check visible switch */
-[data-wdash=switch]:checked + [data-ddash=switch] {
+[data-ddash=switch]:checked + [data-ddash=visible-switch] {
     background-color: #7de37d;
     border-color: rgba(255, 255, 255, .35);
 }
-[data-wdash=switch]:checked + [data-ddash=switch] > div {
+[data-ddash=switch]:checked + [data-ddash=visible-switch] > div {
     left: 50px;
     background-color: rgba(255, 255, 255, 1);
 }
 /* hover styles for switch */
-[data-wdash=switch]:checked + [data-ddash=switch]:hover {
+[data-ddash=switch]:checked + [data-ddash=visible-switch]:hover {
     border-color: rgba(255, 255, 255, .55);
 }
-[data-wdash=switch]:checked + [data-ddash=switch]:hover > div {
+[data-ddash=switch]:checked + [data-ddash=visible-switch]:hover > div {
     background-color: rgba(255, 255, 255, .86);
 }
-[data-wdash=switch]:not(:checked) + [data-ddash=switch]:hover {
+[data-ddash=switch]:not(:checked) + [data-ddash=visible-switch]:hover {
     border-color: rgba(208, 208, 208, .7);
 }
-[data-wdash=switch]:not(:checked) + [data-ddash=switch]:hover > div {
+[data-ddash=switch]:not(:checked) + [data-ddash=visible-switch]:hover > div {
     background-color: rgba(208, 208, 208, .85);
 }
