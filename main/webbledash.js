@@ -97,6 +97,10 @@ function remove_unneeded_spaces (string) {
 // function for when the document is loaded
 $( document ).ready(function () {
 
+
+
+
+
     // -----
     // textboxes
     // -----
@@ -143,7 +147,7 @@ $( document ).ready(function () {
     // -----
     // large quote
     // -----
-    $(d("large-quote", "div,span")).each(function () {
+    d("large-quote", "div,span").each(function () {
         // add ddash property to element
         $( this ).attr( "data-ddash", "large-quote" );
         // wrap the element in a wrapper to align it in the center
@@ -182,7 +186,7 @@ $( document ).ready(function () {
     // -----
     // inline quote
     // -----
-    $(d("inline-quote", "span")).each(function () {
+    d("inline-quote", "span").each(function () {
         // add ddash property to element
         $( this ).attr( "data-ddash", "inline-quote" );
         // add a name to the quote if given
@@ -228,5 +232,9 @@ $( document ).ready(function () {
         // set the index of the switch to use later when clicking on the element
         $( this ).attr( "data-ddash-switch-index", String(index) );
     });
+
+
+
+
 
 });
