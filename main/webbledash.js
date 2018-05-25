@@ -52,7 +52,7 @@ function d (name, elements /* elements are optional */) {
 
 }
 
-// function to check or uncheck a webbledash checkbox
+// function to check or uncheck a webbledash switch
 function wdash_switch_change_prop (index) {
     // check if the switch is already checked or not
     if ($( "[data-ddash-switch-index="+index+"]" ).is( ":checked" )) {
@@ -61,6 +61,18 @@ function wdash_switch_change_prop (index) {
     } else {
         // check the switch
         $( "[data-ddash-switch-index="+index+"]" ).prop( "checked", true );
+    }
+}
+
+// function to check or uncheck a webbledash checkbox
+function wdash_checkbox_change_prop (index) {
+    // check if the checkbox is already checked or not
+    if ($( "[data-ddash-checkbox-index="+index+"]" ).is( ":checked" )) {
+        // uncheck the checkbox
+        $( "[data-ddash-checkbox-index="+index+"]" ).prop( "checked", false );
+    } else {
+        // check the checkbox
+        $( "[data-ddash-checkbox-index="+index+"]" ).prop( "checked", true );
     }
 }
 
@@ -104,7 +116,7 @@ $( document ).ready(function () {
     // -----
     // textboxes
     // -----
-    d("textbox", "input[type=text],input[type=password],input[type=search],input[type=email]").each(function () {
+    d( "textbox", "input[type=text],input[type=password],input[type=search],input[type=email]" ).each(function () {
         // add ddash property to element
         $( this ).attr( "data-ddash", "textbox" );
         // add parent element to textbox
@@ -144,10 +156,15 @@ $( document ).ready(function () {
 
 
 
+
+
+
+
+
     // -----
     // large quote
     // -----
-    d("large-quote", "div,span").each(function () {
+    d( "large-quote", "div,span" ).each(function () {
         // add ddash property to element
         $( this ).attr( "data-ddash", "large-quote" );
         // wrap the element in a wrapper to align it in the center
@@ -183,10 +200,15 @@ $( document ).ready(function () {
 
 
 
+
+
+
+
+
     // -----
     // inline quote
     // -----
-    d("inline-quote", "span").each(function () {
+    d( "inline-quote", "span" ).each(function () {
         // add ddash property to element
         $( this ).attr( "data-ddash", "inline-quote" );
         // add a name to the quote if given
@@ -220,17 +242,58 @@ $( document ).ready(function () {
 
 
 
+
+
+
+
+
     // -----
     // switches
     // -----
-    // replace all dash checkboxes with proper styled ones
-    d("switch", "input[type=checkbox]").each(function (index) {
+    // replace all dash checkboxes (with data-wdash=switch) with proper styled ones
+    d( "switch", "input[type=checkbox]" ).each(function (index) {
+
         // add ddash property to element
         $( this ).attr( "data-ddash", "switch" );
+
         // insert the visible switch after the real checkbox that is being used
         $( this ).after( "<div data-ddash='visible-switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
+
         // set the index of the switch to use later when clicking on the element
         $( this ).attr( "data-ddash-switch-index", String(index) );
+
+    });
+
+
+
+
+
+
+
+
+
+
+    // -----
+    // checkboxes
+    // -----
+    // replace default checkboxes (with data-wdash=checkbox added) with proper styled ones
+    d( "checkbox", "input[type=checkbox]" ).each(function (index) {
+
+        // add ddash property to element
+        $( this ).attr( "data-ddash", "checkbox" );
+
+        // insert the visible checkbox after the real checkbox that is being used
+        $( this ).after(
+            "<div data-ddash='visible-checkbox' onclick='wdash_checkbox_change_prop("+index+")'>"+
+                "<svg biewbox='0 0 52 52'>"+
+                    "<path class='checkmark' fill='none' d='M7 18 l5 5 l13 -13' />"+
+                "</svg>"+
+            "</div>"
+        );
+
+        // set the index of the checkbox to use later when clicking on the element
+        $( this ).attr( "data-ddash-checkbox-index", String(index) );
+
     });
 
 

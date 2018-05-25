@@ -9,3 +9,4 @@ textbox             | styled input text                                         
 large-quote         | styled large quote in the middle of the screen              | <div>, <span>
 inline-quotes       | styled small inline quote                                   | <span>
 switch              | styled switch in stead of checkbox                          | <input type="checkbox">
+checkbox            | styled checkbox in stead of browser default checkbox        | <input type="checkbox">

@@ -64,6 +64,11 @@ This is to only let the script decide which elements are valid for usage
 
 
 
+
+
+
+
+
 /* large quotes */
 /* container for the large quote */
 [data-ddash=large-quote-container] {
@@ -102,6 +107,11 @@ This is to only let the script decide which elements are valid for usage
 
 
 
+
+
+
+
+
 /* inline quotes */
 /* original quote element */
 [data-ddash=inline-quote] {
@@ -119,6 +129,11 @@ This is to only let the script decide which elements are valid for usage
     font-style: italic;
     color: #b0b0b0;
 }
+
+
+
+
+
 
 
 
@@ -173,4 +188,69 @@ This is to only let the script decide which elements are valid for usage
 }
 [data-ddash=switch]:not(:checked) + [data-ddash=visible-switch]:hover > div {
     background-color: rgba(208, 208, 208, .85);
+}
+
+
+
+
+
+
+
+
+
+
+/* checkbox */
+[data-ddash=checkbox] {
+    display: none;
+}
+/* actual visible switch */
+[data-ddash=checkbox] + [data-ddash=visible-checkbox] {
+    width: 36px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    transition: all .17s;
+    position: relative;
+    display: inline-block;
+    border: 2px solid #d0d0d0;
+    cursor: pointer;
+}
+/* svg of the checkmark that is displayd when checked */
+[data-ddash=checkbox] + [data-ddash=visible-checkbox] > svg {
+    width: 100%;
+    height: 100%;
+    transition: inherit;
+}
+/* actual path of the checkmark */
+[data-ddash=checkbox] + [data-ddash=visible-checkbox] > svg path {
+  width: 56px;
+  height: 56px;
+  display: block;
+  stroke-width: 2;
+  stroke: transparent;
+  transition: inherit;
+}
+/* check visible switch */
+[data-ddash=checkbox]:checked + [data-ddash=visible-checkbox] {
+    background-color: #7de37d;
+    border-color: rgba(255, 255, 255, .35);
+}
+/* svg of checkmark inside checkbox */
+[data-ddash=checkbox]:checked + [data-ddash=visible-checkbox] > svg path {
+    stroke: rgba(255,255,255,1);
+}
+/* hover styles for switch */
+[data-ddash=checkbox]:checked + [data-ddash=visible-checkbox]:hover {
+    border-color: rgba(255, 255, 255, .55);
+}
+[data-ddash=checkbox]:not(:checked) + [data-ddash=visible-checkbox]:hover {
+    border-color: rgba(208, 208, 208, .7);
+}
+/* svg of checkmark inside not checked checkbox */
+[data-ddash=checkbox]:not(:checked) + [data-ddash=visible-checkbox]:hover > svg path {
+    stroke: rgba(208, 208, 208, .4);
+}
+/* svg of checkmark inside checked checkbox */
+[data-ddash=checkbox]:checked + [data-ddash=visible-checkbox]:hover > svg path {
+    stroke: rgba(255,255,255,.7);
 }
