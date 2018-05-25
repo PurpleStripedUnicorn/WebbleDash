@@ -226,7 +226,7 @@ This is to only let the script decide which elements are valid for usage
   width: 56px;
   height: 56px;
   display: block;
-  stroke-width: 2;
+  stroke-width: 4px;
   stroke: transparent;
   transition: inherit;
 }
@@ -248,5 +248,5 @@ This is to only let the script decide which elements are valid for usage
 }
 /* svg of checkmark inside checked checkbox */
 [data-ddash=checkbox]:checked + [data-ddash=visible-checkbox]:hover > svg path {
-    stroke: rgba(255,255,255,.7);
+    stroke: rgba(255,255,255,.85);
 }
