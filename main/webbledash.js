@@ -282,13 +282,21 @@ $( document ).ready(function () {
         // add ddash property to element
         $( this ).attr( "data-ddash", "checkbox" );
 
+        // if a width or height is defined, change the width and height of the result object
+        // define style to be empty at first
         var style_add = "";
+
+        // check if the height is defined in css
         if (Number($( this ).css( "height" ).replace("px", "")) > 15) {
             var height = $( this ).css( "height" );
+            // set the width and height to the gotten height
             style_add = "width: "+height+"; height: "+height+";";
         }
+        
+        // check if the width is defined in css
         if (Number($( this ).css( "width" ).replace("px", "")) > 15) {
             var width = $( this ).css( "width" );
+            // set the width and height to the gotten width
             style_add = "width: "+width+"; height: "+width+";";
         }
 
