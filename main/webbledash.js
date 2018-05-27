@@ -37,8 +37,6 @@ function d (name, elements /* elements are optional */) {
         // remove the first comma in the result_elements string, added in the first iteration of the for loop
         result_elements = result_elements.substr(1);
 
-        console.log($(""+result_elements))
-
         // return all of the elements with [data-wdash=name] added to them
         return $(""+result_elements+"");
 
