@@ -112,11 +112,19 @@ $( document ).ready(function () {
     // > check for variables set in the document
     // -----
     var theme_color = "#7de37d"; // default theme color
+    var second_theme_color = "#7de3e3"; // default second theme color
     $( "div[data-wdash-var]" ).each(function () {
         if ($( this ).is( "[data-wdash-value]" )) {
 
+            // main theme color
             if ($( this ).is( "[data-wdash-var=theme-color]" )) {
                 theme_color = $( this ).attr( "data-wdash-value" );
+                $( this ).remove();
+            }
+
+            // second theme color
+            if ($( this ).is( "[data-wdash-var=second-theme-color]" )) {
+                second_theme_color = $( this ).attr( "data-wdash-value" );
                 $( this ).remove();
             }
 
@@ -267,11 +275,14 @@ $( document ).ready(function () {
     // replace all dash checkboxes (with data-wdash=switch) with proper styled ones
     d( "switch", "input[type=checkbox]" ).each(function (index) {
 
+        // check if second color or main color should be used
+        var sc = $( this ).is("[data-wdash-second-color]");
+
         // add ddash property to element
         $( this ).attr( "data-ddash", "switch" );
 
         // insert the visible switch after the real checkbox that is being used
-        $( this ).after( "<div style='background-color: "+theme_color+";' data-ddash='visible-switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
+        $( this ).after( "<div style='background-color: "+(sc ? second_theme_color : theme_color)+";' data-ddash='visible-switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
 
         // set the index of the switch to use later when clicking on the element
         $( this ).attr( "data-ddash-switch-index", String(index) );
@@ -293,6 +304,9 @@ $( document ).ready(function () {
     // replace default checkboxes (with data-wdash=checkbox added) with proper styled ones
     d( "checkbox", "input[type=checkbox]" ).each(function (index) {
 
+        // check if second color or main color should be used
+        var sc = $( this ).is("[data-wdash-second-color]");
+
         // add ddash property to element
         $( this ).attr( "data-ddash", "checkbox" );
 
@@ -309,7 +323,7 @@ $( document ).ready(function () {
 
         // insert the visible checkbox after the real checkbox that is being used
         $( this ).after(
-            "<div style='"+style_add+" background-color: "+theme_color+";' data-ddash='visible-checkbox' onclick='wdash_checkbox_change_prop("+index+")'>"+
+            "<div style='"+style_add+" background-color: "+(sc ? second_theme_color : theme_color)+";' data-ddash='visible-checkbox' onclick='wdash_checkbox_change_prop("+index+")'>"+
                 "<svg viewbox='0 0 52 52'>"+
                     "<path class='checkmark' fill='none' d='M10 29 l8 8 l23 -23' />"+
                 "</svg>"+
@@ -335,12 +349,15 @@ $( document ).ready(function () {
     // -----
     d( "button", "input[type=submit],input[type=button],button" ).each(function () {
 
+        // check if second color or main color should be used
+        var sc = $( this ).is("[data-wdash-second-color]");
+
         // add ddash property to the element
         // to make it accessible from css
         $( this ).attr( "data-ddash", "button" );
 
         // add the theme color background color
-        $( this ).css( "background-color", theme_color );
+        $( this ).css( "background-color", (sc ? second_theme_color : theme_color) );
 
     });
 
