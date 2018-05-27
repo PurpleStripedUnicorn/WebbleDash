@@ -316,6 +316,7 @@ This is to only let the script decide which elements are valid for usage
     font-size: 1.05em;
     cursor: pointer;
     transition: border .17s;
+    outline: none;
 }
 [data-ddash=button]:focus,
 [data-ddash=button]:hover {
