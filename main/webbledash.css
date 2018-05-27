@@ -310,15 +310,16 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=button] {
     padding: .62em 1.4em;
     background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, .35);
-    border-radius: 7px;
+    border: .17em solid rgba(255, 255, 255, .35);
+    border-radius: 5px;
     color: white;
     font-size: 1.05em;
     cursor: pointer;
-    transition: border .17s;
+    transition: border .17s, color .17s;
     outline: none;
 }
 [data-ddash=button]:focus,
 [data-ddash=button]:hover {
     border-color: rgba(255, 255, 255, .55);
+    color: rgba(255, 255, 255, .8);
 }
