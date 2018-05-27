@@ -325,4 +325,27 @@ $( document ).ready(function () {
 
 
 
+
+
+
+
+
+    // -----
+    // button
+    // -----
+    d( "button", "input[type=submit],input[type=button],button" ).each(function () {
+
+        // add ddash property to the element
+        // to make it accessible from css
+        $( this ).attr( "data-ddash", "button" );
+
+        // add the theme color background color
+        $( this ).css( "background-color", theme_color );
+
+    });
+
+
+
+
+
 });

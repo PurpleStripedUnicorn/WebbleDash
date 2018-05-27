@@ -99,7 +99,6 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=large-quote-main-quote],
 [data-ddash=large-quote-name] {
     display: block;
-    /* font-family: serif !important; /* beautify the text by making it serif */ */
 }
 [data-ddash=large-quote-name] {
     font-size: 1.5em;
@@ -268,4 +267,29 @@ This is to only let the script decide which elements are valid for usage
 /* svg of checkmark inside checked checkbox */
 [data-ddash=checkbox]:checked + [data-ddash=visible-checkbox]:hover > svg path {
     stroke: rgba(255,255,255,.85);
+}
+
+
+
+
+
+
+
+
+
+
+/* button */
+[data-ddash=button] {
+    padding: .62em 1.4em;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .35);
+    border-radius: 7px;
+    color: white;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: border .17s;
+}
+[data-ddash=button]:focus,
+[data-ddash=button]:hover {
+    border-color: rgba(255, 255, 255, .55);
 }
