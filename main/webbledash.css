@@ -1,6 +1,33 @@
 /*
 
-In the styling only data-ddash is used,
+In this styling part only wdash is used (not ddash)
+this is the style for when the js is not fully executed yet
+
+*/
+[data-wdash=textbox]:not([data-ddash=textbox]) {
+    /* display: none; */
+    display: inline-block;
+    height: 48px;
+    width: 255px;
+    background-color: #eee;
+    color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+In this styling part only data-ddash is used,
 not data-wdash.
 This is to only let the script decide which elements are valid for usage
 
