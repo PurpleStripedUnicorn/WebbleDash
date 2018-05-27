@@ -32,23 +32,31 @@ This is to only let the script decide which elements are valid for usage
     color: #6f6f6f;
     font-family: sans-serif;
 }
-[data-ddash=textbox-wrapper]:hover [data-ddash=textbox] {
+[data-ddash=textbox-wrapper]:hover [data-ddash=textbox]:not(:disabled):not(:focus) {
     border-color: #c0c0c0;
 }
 [data-ddash=textbox-wrapper] [data-ddash=textbox]:focus {
     border-color: #a0a0a0;
     color: black;
 }
-[data-ddash=textbox-wrapper] [data-ddash=textbox]:focus + [data-ddash=textbox-placeholder], {
+/* when the textbox is disabled */
+[data-ddash=textbox-wrapper] [data-ddash=textbox]:disabled {
+    background-color: #eee;
+}
+[data-ddash=textbox-wrapper] [data-ddash=textbox]:disabled + [data-ddash=textbox-placeholder] {
+    color: #c3c3c3;
+    cursor: default;
+}
+[data-ddash=textbox-wrapper] [data-ddash=textbox]:focus + [data-ddash=textbox-placeholder] {
     color: #909090;
 }
-[data-ddash=textbox-wrapper]:hover [data-ddash=textbox-placeholder] {
+[data-ddash=textbox-wrapper]:hover [data-ddash=textbox]:not(:disabled):not(:focus) + [data-ddash=textbox-placeholder] {
     color: #b0b0b0;
 }
 [data-ddash=textbox-wrapper][data-ddash-placeholder-shown=false] [data-ddash=textbox-placeholder] {
     display: none;
 }
-
+/* placeholder */
 [data-ddash=textbox-placeholder] {
     position: absolute;
     top: 50%;
@@ -58,6 +66,7 @@ This is to only let the script decide which elements are valid for usage
     letter-spacing: .3px;
     color: #c0c0c0;
     display: block;
+    cursor: text;
 }
 
 
@@ -224,6 +233,9 @@ This is to only let the script decide which elements are valid for usage
     width: 100%;
     height: 100%;
     transition: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 /* actual path of the checkmark */
 [data-ddash=checkbox] + [data-ddash=visible-checkbox] > svg path {

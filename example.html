@@ -59,9 +59,7 @@ This file might not contain all of the features in WebbleDash!!!
 <body>
 
     <!-- you can change the theme color with data-wdash-var="theme-color" -->
-    <div data-wdash-var="theme-color" data-wdash-value="#e2ad5d">
-
-    </div>
+    <div data-wdash-var="theme-color" data-wdash-value="#36a7d1"></div>
 
 
 
@@ -75,7 +73,8 @@ This file might not contain all of the features in WebbleDash!!!
     -->
     <h3>Basic textbox [data-wdash=textbox]</h3>
     <input data-wdash="textbox" type="text" placeholder="username" /><br />
-    <input data-wdash="textbox" type="password" placeholder="password" />
+    <input data-wdash="textbox" type="password" placeholder="password" /><br />
+    <input data-wdash="textbox" type="text" placeholder="disabled" disabled />
 
     <!--
         [data-wdash=switch]
@@ -132,6 +131,14 @@ This file might not contain all of the features in WebbleDash!!!
             </td>
             <td>
                 <input type="checkbox" data-wdash="checkbox" checked data-wdash-prop-size="32" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Smaller checkbox
+            </td>
+            <td>
+                <input type="checkbox" data-wdash="checkbox" checked data-wdash-prop-size="10" />
             </td>
         </tr>
     </table>

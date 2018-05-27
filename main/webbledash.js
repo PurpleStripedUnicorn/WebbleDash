@@ -117,6 +117,7 @@ $( document ).ready(function () {
 
             if ($( this ).is( "[data-wdash-var=theme-color]" )) {
                 theme_color = $( this ).attr( "data-wdash-value" );
+                $( this ).remove();
             }
 
         }
@@ -146,7 +147,7 @@ $( document ).ready(function () {
             // make sure that when the placeholder is clicked, the textbox still focuses
             $( this ).parent().find( "[data-ddash=textbox-placeholder]" ).click(function () {
                 // focus the input text element that corresponds with the placeholder that was clicked
-                $( this ).parent().find( "input[type=text]" ).focus();
+                $( this ).parent().find( "[data-ddash=textbox]" ).focus();
             });
 
             // make element easier to use in function
@@ -300,7 +301,7 @@ $( document ).ready(function () {
         var style_add = "";
 
         // check if the size is defined in [data-wdash-prop]
-        if (Number($( this ).attr( "data-wdash-prop-size" )) >= 15) {
+        if (Number($( this ).attr( "data-wdash-prop-size" )) >= 10) {
             var size = $( this ).attr( "data-wdash-prop-size" ) + "px";
             // set the width and height to the gotten height
             style_add = "width: "+size+"; height: "+size+";";
