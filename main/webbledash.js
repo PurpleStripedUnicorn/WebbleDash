@@ -109,6 +109,21 @@ function remove_unneeded_spaces (string) {
 // function for when the document is loaded
 $( document ).ready(function () {
 
+    // -----
+    // preload
+    // > check for variables set in the document
+    // -----
+    var theme_color = "#7de37d"; // default theme color
+    $( "div[data-wdash-var]" ).each(function () {
+        if ($( this ).is( "[data-wdash-value]" )) {
+
+            if ($( this ).is( "[data-wdash-var=theme-color]" )) {
+                theme_color = $( this ).attr( "data-wdash-value" );
+            }
+
+        }
+    });
+
 
 
 
@@ -257,7 +272,7 @@ $( document ).ready(function () {
         $( this ).attr( "data-ddash", "switch" );
 
         // insert the visible switch after the real checkbox that is being used
-        $( this ).after( "<div data-ddash='visible-switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
+        $( this ).after( "<div style='background-color: "+theme_color+";' data-ddash='visible-switch' onclick='wdash_switch_change_prop("+index+")'><div></div></div>" );
 
         // set the index of the switch to use later when clicking on the element
         $( this ).attr( "data-ddash-switch-index", String(index) );
@@ -286,23 +301,16 @@ $( document ).ready(function () {
         // define style to be empty at first
         var style_add = "";
 
-        // check if the height is defined in css
-        if (Number($( this ).css( "height" ).replace("px", "")) > 15) {
-            var height = $( this ).css( "height" );
+        // check if the size is defined in [data-wdash-prop]
+        if (Number($( this ).attr( "data-wdash-prop-size" )) >= 15) {
+            var size = $( this ).attr( "data-wdash-prop-size" ) + "px";
             // set the width and height to the gotten height
-            style_add = "width: "+height+"; height: "+height+";";
-        }
-        
-        // check if the width is defined in css
-        if (Number($( this ).css( "width" ).replace("px", "")) > 15) {
-            var width = $( this ).css( "width" );
-            // set the width and height to the gotten width
-            style_add = "width: "+width+"; height: "+width+";";
+            style_add = "width: "+size+"; height: "+size+";";
         }
 
         // insert the visible checkbox after the real checkbox that is being used
         $( this ).after(
-            "<div style='"+style_add+"' data-ddash='visible-checkbox' onclick='wdash_checkbox_change_prop("+index+")'>"+
+            "<div style='"+style_add+" background-color: "+theme_color+";' data-ddash='visible-checkbox' onclick='wdash_checkbox_change_prop("+index+")'>"+
                 "<svg viewbox='0 0 52 52'>"+
                     "<path class='checkmark' fill='none' d='M10 29 l8 8 l23 -23' />"+
                 "</svg>"+

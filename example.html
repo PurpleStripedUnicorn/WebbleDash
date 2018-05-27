@@ -58,6 +58,11 @@ This file might not contain all of the features in WebbleDash!!!
 </head>
 <body>
 
+    <!-- you can change the theme color with data-wdash-var="theme-color" -->
+    <div data-wdash-var="theme-color" data-wdash-value="#c242f4">
+
+    </div>
+
 
 
     <!-- form elements -->
@@ -101,6 +106,9 @@ This file might not contain all of the features in WebbleDash!!!
         custom checkbox for better design than the ordinary checkboxes
     -->
     <h3>Custom checkbox [data-wdash=checkbox]</h3>
+    <p>
+        You can change the size of the checkbox by adding data-wdash-prop-size="[size]"
+    </p>
     <table>
         <tr>
             <td>
@@ -120,10 +128,10 @@ This file might not contain all of the features in WebbleDash!!!
         </tr>
         <tr>
             <td>
-                Smaller checkbox:
+                Larger checkbox:
             </td>
             <td>
-                <input type="checkbox" data-wdash="checkbox" checked style="width: 16px;" />
+                <input type="checkbox" data-wdash="checkbox" checked data-wdash-prop-size="32" />
             </td>
         </tr>
     </table>

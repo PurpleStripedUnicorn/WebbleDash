@@ -1,6 +1,7 @@
 --- WebbleDash small cheat sheet ---
 
 <html-tag data-wdash="***ELEMENT***"> to use WebbleDash correctly
+<html-tag data-wdash-prop-***PROPERTY_NAME***="***PROPERTY***"> to set a property op the object
 
 
 ELEMENT             | DESCRIPTION                                                 | CAN BE USED ON
@@ -10,3 +11,7 @@ large-quote         | styled large quote in the middle of the screen            
 inline-quotes       | styled small inline quote                                   | <span>
 switch              | styled switch in stead of checkbox                          | <input type="checkbox">
 checkbox            | styled checkbox in stead of browser default checkbox        | <input type="checkbox">
+
+PROPERTY NAME       | DESCRIPTION                                                           | CAN BE USED ON (data-wdash=***)
+--------------------+-----------------------------------------------------------------------+---------------------------
+size                | used to change the Width+Height of certain webbledash objects         | checkbox
