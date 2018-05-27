@@ -4,8 +4,9 @@ In this styling part only wdash is used (not ddash)
 this is the style for when the js is not fully executed yet
 
 */
+
+/* textbox */
 [data-wdash=textbox]:not([data-ddash=textbox]) {
-    /* display: none; */
     display: inline-block;
     height: 48px;
     width: 255px;
