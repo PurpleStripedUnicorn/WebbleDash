@@ -147,7 +147,7 @@ $( document ).ready(function () {
         if ($( this ).is("[placeholder]")) {
 
             // add the placeholder text in a different style
-            $( this ).parent().append( "<div data-ddash='textbox-placeholder'>" + $( this ).attr("placeholder") + "</div>" );
+            $( this ).parent().append( "<div data-ddash='textbox-placeholder'><div>" + $( this ).attr("placeholder") + "</div></div>" );
 
             // remove placeholder attribute so it is not diplsayed by the browser
             $( this ).removeAttr( "placeholder" );

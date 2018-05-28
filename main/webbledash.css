@@ -71,30 +71,37 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=textbox-wrapper] [data-ddash=textbox]:disabled {
     background-color: #eee;
 }
-[data-ddash=textbox-wrapper] [data-ddash=textbox]:disabled + [data-ddash=textbox-placeholder] {
+[data-ddash=textbox-wrapper] [data-ddash=textbox]:disabled + [data-ddash=textbox-placeholder] > div {
     color: #c3c3c3;
     cursor: default;
 }
-[data-ddash=textbox-wrapper] [data-ddash=textbox]:focus + [data-ddash=textbox-placeholder] {
+[data-ddash=textbox-wrapper] [data-ddash=textbox]:focus + [data-ddash=textbox-placeholder] > div {
     color: #909090;
 }
-[data-ddash=textbox-wrapper]:hover [data-ddash=textbox]:not(:disabled):not(:focus) + [data-ddash=textbox-placeholder] {
+[data-ddash=textbox-wrapper]:hover [data-ddash=textbox]:not(:disabled):not(:focus) + [data-ddash=textbox-placeholder] > div {
     color: #b0b0b0;
 }
-[data-ddash=textbox-wrapper][data-ddash-placeholder-shown=false] [data-ddash=textbox-placeholder] {
+[data-ddash=textbox-wrapper][data-ddash-placeholder-shown=false] [data-ddash=textbox-placeholder] > div {
     display: none;
 }
 /* placeholder */
 [data-ddash=textbox-placeholder] {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: text;
+}
+[data-ddash=textbox-placeholder] > div {
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 17px;
+    left: 19px;
     font-size: 0.8em;
     letter-spacing: .3px;
     color: #c0c0c0;
     display: block;
-    cursor: text;
 }
 
 
