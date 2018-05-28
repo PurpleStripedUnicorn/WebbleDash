@@ -328,5 +328,4 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=button]:focus,
 [data-ddash=button]:hover {
     border-color: rgba(255, 255, 255, .55);
-    color: rgba(255, 255, 255, .8);
 }
