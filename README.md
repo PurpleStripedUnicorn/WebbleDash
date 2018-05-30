@@ -10,7 +10,7 @@ Please include both the "main/webbledash.js" and "main/webbledash.css" in your p
 
 You can use WebbleDash by using the attribute data-wdash="[element_name]" on one of the supported elements for that element - [see cheat_sheet.txt for more info](../master/cheat_sheet.txt).
 
-### Examples
+## Examples
 
 **Example:** This will create a switch element with different styling from the normal html checkboxes
 
