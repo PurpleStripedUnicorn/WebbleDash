@@ -365,4 +365,27 @@ $( document ).ready(function () {
 
 
 
+
+
+
+
+
+    d( "loading-circle", "div" ).each(function () {
+
+        // check if second color or main color should be used
+        var sc = $( this ).is("[data-wdash-second-color]");
+
+        // add ddash to element
+        $( this ).attr( "data-ddash", "loading-circle" );
+
+        // add the visible loading circle to the element
+        $( this ).html( '<svg viewBox="25 25 50 50" >'+
+                            '<circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke="' + (sc ? second_theme_color : theme_color) + '" />'+
+                        '</svg>' );
+
+    });
+
+
+
+
 });

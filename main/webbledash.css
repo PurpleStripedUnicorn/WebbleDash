@@ -329,3 +329,57 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=button]:hover {
     border-color: rgba(255, 255, 255, .55);
 }
+
+
+
+
+
+
+
+
+
+
+/* loading circle */
+[data-ddash=loading-circle] {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+[data-ddash=loading-circle] > svg {
+
+    -webkit-animation: rotate .7s linear infinite;
+    animation: rotate .7s linear infinite;
+    height: 100%;
+
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+
+}
+
+[data-ddash=loading-circle] > svg > circle {
+    stroke-width: 5px;
+    stroke-dasharray: 100,200;
+    stroke-dashoffset: -100;
+    stroke-linecap: round;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
