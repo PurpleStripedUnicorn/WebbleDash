@@ -26,6 +26,8 @@ You can use WebbleDash by using the attribute data-wdash="[element_name]" on one
 </span>
 ```
 
+_see [example.html](../master/example.html) for more examples_ 
+
 ## List of features
 
 | Element name        | Description                                              |
