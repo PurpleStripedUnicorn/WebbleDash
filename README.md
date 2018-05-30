@@ -8,7 +8,9 @@ This is still an alpha version, please remember that this project may contain bu
 
 ## How to use WebbleDash
 
-You can use WebbleDash by using the attribute data-wdash="[element_name]" on one of the supported elements for that element - see [cheat_sheet.txt](../master/cheat_sheet.txt) for more info.
+You can use WebbleDash by using the attribute data-wdash="[element_name]" on one of the supported elements for that element.
+
+_see [cheat_sheet.txt](../master/cheat_sheet.txt) for more info_
 
 ## Examples
 
