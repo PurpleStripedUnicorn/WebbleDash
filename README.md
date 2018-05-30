@@ -8,7 +8,7 @@ Please include both the "main/webbledash.js" and "main/webbledash.css" in your p
 
 ## How to use WebbleDash
 
-You can use WebbleDash by using the attribute data-wdash="[element_name]" on one of the supported elements for that element - [see cheat_cheat.txt for more info](../blob/master/cheat_cheat.txt).
+You can use WebbleDash by using the attribute data-wdash="[element_name]" on one of the supported elements for that element - [see cheat_cheat.txt for more info](../master/cheat_cheat.txt).
 
 That's it! You are now a master at WebbleDash.
 
