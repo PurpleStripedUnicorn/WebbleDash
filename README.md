@@ -8,9 +8,27 @@ Please include both the "main/webbledash.js" and "main/webbledash.css" in your p
 
 ## How to use WebbleDash
 
-You can use WebbleDash by using the attribute data-wdash="[element_name]" on one of the supported elements for that element - [see cheat_cheat.txt for more info](../master/cheat_sheet.txt).
+You can use WebbleDash by using the attribute data-wdash="[element_name]" on one of the supported elements for that element - [see cheat_sheet.txt for more info](../master/cheat_sheet.txt).
 
-That's it! You are now a master at WebbleDash.
+### Examples
+
+**Example:** This will create a switch element with different styling from the normal html checkboxes
+
+```html
+
+<input type="checkbox" checked data-wdash="switch" />
+
+```
+
+**Example:** This will create a large quote that aligns to the center of the page
+
+```html
+
+<span data-wdash="large-quote">
+    I love cookies - PurpleStripedUnicorn
+</span>
+
+```
 
 ## List of features
 
