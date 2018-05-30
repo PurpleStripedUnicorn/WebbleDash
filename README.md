@@ -8,7 +8,7 @@ This is still an alpha version, please remember that this project may contain bu
 
 ## How to use WebbleDash
 
-You can use WebbleDash by using the attribute data-wdash="[element_name]" on one of the supported elements for that element - [see cheat_sheet.txt for more info](../master/cheat_sheet.txt).
+You can use WebbleDash by using the attribute data-wdash="[element_name]" on one of the supported elements for that element - see [cheat_sheet.txt](../master/cheat_sheet.txt) for more info.
 
 ## Examples
 
@@ -26,7 +26,7 @@ You can use WebbleDash by using the attribute data-wdash="[element_name]" on one
 </span>
 ```
 
-_see [example.html](../master/example.html) for more examples_ 
+_see [example.html](../master/example.html) for more examples_
 
 ## List of features
 
