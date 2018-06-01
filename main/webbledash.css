@@ -1,5 +1,23 @@
 /*
 
+defaults for elements that are not wdash or ddash
+
+*/
+body {
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
 In this styling part only wdash is used (not ddash)
 this is the style for when the js is not fully executed yet
 
