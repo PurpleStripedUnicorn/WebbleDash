@@ -370,6 +370,9 @@ $( document ).ready(function () {
 
 
 
+    // -----
+    // loading circle
+    // -----
     d( "loading-circle", "div" ).each(function () {
 
         // check if second color or main color should be used
@@ -377,6 +380,14 @@ $( document ).ready(function () {
 
         // add ddash to element
         $( this ).attr( "data-ddash", "loading-circle" );
+
+        // check if the size is defined in [data-wdash-prop]
+        if (Number($( this ).attr( "data-wdash-prop-size" )) >= 5) {
+            var size = $( this ).attr( "data-wdash-prop-size" ) + "px";
+            // set the width and height to the gotten height
+            $( this ).css( "width", size );
+            $( this ).css( "height", size );
+        }
 
         // add the visible loading circle to the element
         $( this ).html( '<svg viewBox="25 25 50 50" >'+
