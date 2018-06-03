@@ -139,10 +139,19 @@ $( document ).ready(function () {
     // textboxes
     // -----
     d( "textbox", "input[type=text],input[type=password],input[type=search],input[type=email]" ).each(function () {
+
         // add ddash property to element
         $( this ).attr( "data-ddash", "textbox" );
+
+        // check if second color or main color should be used
+        var sc = $( this ).is("[data-wdash-second-color]");
+
+        // apply style to this element
+        $( this ).css( "border-color", (sc ? second_theme_color : theme_color) );
+
         // add parent element to textbox
         $( this ).wrap("<div data-ddash='textbox-wrapper' data-ddash-placeholder-shown='true'></div>");
+
         // check if the input has a placeholder
         if ($( this ).is("[placeholder]")) {
 
@@ -172,6 +181,7 @@ $( document ).ready(function () {
                 }
             } );
         }
+
     });
 
 
