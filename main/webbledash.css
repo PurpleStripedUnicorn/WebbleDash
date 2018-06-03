@@ -124,7 +124,7 @@ This is to only let the script decide which elements are valid for usage
     padding: 11px 15px;
     font-size: 1.1em;
     transition: all .1s;
-    color: #6f6f6f;
+    color: black;
     font-family: sans-serif;
     background-color: white;
 }
@@ -133,7 +133,7 @@ This is to only let the script decide which elements are valid for usage
 }
 [data-ddash=textbox-wrapper] [data-ddash=textbox]:not(:focus) {
     border-color: #d0d0d0 !important; /* !important to override the inline styling */
-    color: black;
+    color: #6f6f6f;
 }
 /* when the textbox is disabled */
 [data-ddash=textbox-wrapper] [data-ddash=textbox]:disabled {
@@ -149,7 +149,7 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=textbox-wrapper]:hover [data-ddash=textbox]:not(:disabled):not(:focus) + [data-ddash=textbox-placeholder] > div {
     color: #b0b0b0;
 }
-[data-ddash=textbox-wrapper][data-ddash-placeholder-shown=false] [data-ddash=textbox-placeholder] > div {
+[data-ddash=textbox-wrapper][data-ddash-placeholder-shown=false] [data-ddash=textbox-placeholder] {
     display: none;
 }
 /* placeholder */
