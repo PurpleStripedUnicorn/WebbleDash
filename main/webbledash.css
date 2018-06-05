@@ -42,16 +42,20 @@ this is the style for when the js is not fully executed yet
 [data-wdash=textbox]:not([data-ddash=textbox]):disabled {
     background-color: #eee;
 }
-[data-wdash=textbox]:not([data-ddash=textbox])::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+/*
+    placeholders; these don't work on all browsers,
+    but aren't not required anyway
+*/
+[data-wdash=textbox]:not([data-ddash=textbox])::-webkit-input-placeholder {
   color: transparent;
 }
-[data-wdash=textbox]:not([data-ddash=textbox])::-moz-placeholder { /* Firefox 19+ */
+[data-wdash=textbox]:not([data-ddash=textbox])::-moz-placeholder {
   color: transparent;
 }
-[data-wdash=textbox]:not([data-ddash=textbox]):-ms-input-placeholder { /* IE 10+ */
+[data-wdash=textbox]:not([data-ddash=textbox]):-ms-input-placeholder {
   color: transparent;
 }
-[data-wdash=textbox]:not([data-ddash=textbox]):-moz-placeholder { /* Firefox 18- */
+[data-wdash=textbox]:not([data-ddash=textbox]):-moz-placeholder {
   color: transparent;
 }
 
