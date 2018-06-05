@@ -383,7 +383,8 @@ This is to only let the script decide which elements are valid for usage
 
 /* button */
 [data-ddash=button] {
-    padding: .56em 1.2em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
     background-color: transparent;
     border: .17em solid rgba(255, 255, 255, 0);
     border-radius: 5px;
@@ -392,10 +393,42 @@ This is to only let the script decide which elements are valid for usage
     cursor: pointer;
     transition: border .17s, color .17s;
     outline: none;
+    box-sizing: border-box;
+    height: 2.6em;
 }
 [data-ddash=button]:focus,
 [data-ddash=button]:hover {
     border-color: rgba(255, 255, 255, .35);
+}
+
+
+
+
+
+
+
+
+
+
+/* button */
+[data-ddash=transparent-button] {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    background-color: transparent;
+    border: .17em solid transparent;
+    text-decoration: none;
+    border-radius: 5px;
+    color: lightgrey;
+    font-size: .85em;
+    cursor: pointer;
+    transition: border .17s, color .17s;
+    outline: none;
+    box-sizing: border-box;
+    height: 2.6em;
+}
+[data-ddash=transparent-button]:focus,
+[data-ddash=transparent-button]:hover {
+    text-decoration: underline;
 }
 
 

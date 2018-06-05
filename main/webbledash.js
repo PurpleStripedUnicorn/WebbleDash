@@ -381,6 +381,26 @@ $( document ).ready(function () {
 
 
     // -----
+    // transparent button
+    // -----
+    d( "transparent-button", "input[type=submit],input[type=button],button" ).each(function () {
+
+        // add ddash property to the element
+        // to make it accessible from css
+        $( this ).attr( "data-ddash", "transparent-button" );
+
+    });
+
+
+
+
+
+
+
+
+
+
+    // -----
     // loading circle
     // -----
     d( "loading-circle", "div" ).each(function () {
