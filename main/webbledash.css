@@ -418,7 +418,7 @@ This is to only let the script decide which elements are valid for usage
     border: .17em solid transparent;
     text-decoration: none;
     border-radius: 5px;
-    color: lightgrey;
+    color: #909090;
     font-size: .85em;
     cursor: pointer;
     transition: border .17s, color .17s;
