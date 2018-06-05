@@ -383,9 +383,9 @@ This is to only let the script decide which elements are valid for usage
 
 /* button */
 [data-ddash=button] {
-    padding: .62em 1.4em;
+    padding: .56em 1.2em;
     background-color: transparent;
-    border: .17em solid rgba(255, 255, 255, .35);
+    border: .17em solid rgba(255, 255, 255, 0);
     border-radius: 5px;
     color: white;
     font-size: 1.05em;
@@ -395,7 +395,7 @@ This is to only let the script decide which elements are valid for usage
 }
 [data-ddash=button]:focus,
 [data-ddash=button]:hover {
-    border-color: rgba(255, 255, 255, .55);
+    border-color: rgba(255, 255, 255, .35);
 }
 
 
