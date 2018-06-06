@@ -12,7 +12,9 @@ inline-quotes       | styled small inline quote                                 
 switch              | styled switch in stead of checkbox                          | <input type="checkbox">
 checkbox            | styled checkbox in stead of browser default checkbox        | <input type="checkbox">
 button              | styled button                                               | <input type="button">, <input type="submit">, <button>
+transparent-button  | styled transparent button                                   | <input type="button", <input type="submit">, <button>
+loading-circle      | simple loading indicator                                    | <div>
 
 PROPERTY NAME       | DESCRIPTION                                                           | CAN BE USED ON (data-wdash=***)
 --------------------+-----------------------------------------------------------------------+---------------------------
-size                | used to change the Width+Height of certain webbledash objects         | checkbox
+size                | used to change the Width+Height of certain webbledash objects         | checkbox, loading-circle

@@ -40,3 +40,5 @@ _see [example.html](../master/example.html) for more examples_
 | switch              | styled switch in stead of checkbox                       |
 | checkbox            | styled checkbox in stead of browser default checkbox     |
 | button              | styled button                                            |
+| transparent-button  | styled transparent button                                |
+| loading-circles     | simple loading indicator                                 |
