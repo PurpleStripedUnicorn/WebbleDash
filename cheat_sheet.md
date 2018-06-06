@@ -3,13 +3,13 @@
 To use WebbleDash correctly:
 
 ```html
-<html-tag data-wdash="***ELEMENT***">
+<html-tag data-wdash="ELEMENT">
 ```
 
 To set a property op the object:
 
 ```html
-<html-tag data-wdash-prop-***PROPERTY_NAME***="***PROPERTY_VALUE***">
+<html-tag data-wdash-prop-PROPERTY_NAME="PROPERTY_VALUE">
 ```
 
 ## Elements
