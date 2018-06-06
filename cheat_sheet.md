@@ -9,7 +9,7 @@ To use WebbleDash correctly:
 To set a property op the object:
 
 ```html
-<html-tag data-wdash-prop-PROPERTY_NAME="PROPERTY_VALUE">
+<html-tag data-wdash-prop-PROPERTYNAME="PROPERTYVALUE">
 ```
 
 ## Elements
