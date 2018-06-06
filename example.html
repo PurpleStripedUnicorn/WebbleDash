@@ -12,8 +12,14 @@ This file might not contain all of the features in WebbleDash!!!
 
     <title>WebbleDash examples</title>
 
-    <!-- ALWAYS make sure the charset is UTF-8 -->
+    <!-- always make sure the charset is UTF-8 -->
     <meta charset="utf-8" />
+
+    <!--
+        just add some custom fonts in here for better looks
+        not required
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:500" rel="stylesheet">
 
     <!-- jQuery library is required for wDash to work! -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -58,11 +64,14 @@ This file might not contain all of the features in WebbleDash!!!
 </head>
 <body>
 
+    <!-- THE VARIABLES SET BELOW ARE ALL OPTIONAL! -->
+
     <!-- you can change the theme color with data-wdash-var="theme-color" -->
     <div data-wdash-var="theme-color" data-wdash-value="#36a7d1"></div>
     <!-- additionally, you can add a second theme color -->
     <div data-wdash-var="second-theme-color" data-wdash-value="#d1366f"></div>
-
+    <!-- define the default font for this document -->
+    <div data-wdash-var="default-font" data-wdash-value="Maven Pro, sans-serif"></div>
 
 
     <!-- form elements -->

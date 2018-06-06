@@ -107,7 +107,9 @@ This is to only let the script decide which elements are valid for usage
 
 /* global styles for all ddash elements */
 [data-ddash] {
-    font-family: sans-serif; /* make all elements sans-serif by default */
+    /* make all elements sans-serif by default
+       this is just in case the javascript somehow fails */
+    font-family: sans-serif;
 }
 
 
@@ -129,7 +131,6 @@ This is to only let the script decide which elements are valid for usage
     font-size: 1.1em;
     transition: all .1s;
     color: black;
-    font-family: sans-serif;
     background-color: white;
 }
 [data-ddash=textbox-wrapper]:hover [data-ddash=textbox]:not(:disabled):not(:focus) {

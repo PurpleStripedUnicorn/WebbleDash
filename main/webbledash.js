@@ -113,6 +113,7 @@ $( document ).ready(function () {
     // -----
     var theme_color = "#7de37d"; // default theme color
     var second_theme_color = "#7de3e3"; // default second theme color
+    var font = "sans-serif"; // default font to use on all WebbleDash elements
     $( "div[data-wdash-var]" ).each(function () {
         if ($( this ).is( "[data-wdash-value]" )) {
 
@@ -125,6 +126,12 @@ $( document ).ready(function () {
             // second theme color
             if ($( this ).is( "[data-wdash-var=second-theme-color]" )) {
                 second_theme_color = $( this ).attr( "data-wdash-value" );
+                $( this ).remove();
+            }
+
+            // font
+            if ($( this ).is( "[data-wdash-var=default-font]" )) {
+                font = $( this ).attr( "data-wdash-value" );
                 $( this ).remove();
             }
 
@@ -425,6 +432,24 @@ $( document ).ready(function () {
                         '</svg>' );
 
     });
+
+
+
+
+
+
+
+
+
+
+
+
+    // code afterwards
+    // > this is the code to run after all elements are placed
+    // > these are mostly actions that apply for all wdash or ddash elements
+
+    // set the default font family to all ddash elements
+    $( "[data-ddash]" ).css( "font-family", font );
 
 
 
