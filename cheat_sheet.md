@@ -14,16 +14,16 @@ To set a property op the object:
 
 ## Elements
 
-| ELEMENT             | DESCRIPTION                                                 | CAN BE USED ON                                                                                             |
-| ------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| textbox             | styled input text                                           | <input type="text">, <input type="password">, <input type="search">, <input type="email">                  |
-| large-quote         | styled large quote in the middle of the screen              | <div>, <span>                                                                                              |
-| inline-quotes       | styled small inline quote                                   | <span>                                                                                                     |
-| switch              | styled switch in stead of checkbox                          | <input type="checkbox">                                                                                    |
-| checkbox            | styled checkbox in stead of browser default checkbox        | <input type="checkbox">                                                                                    |
-| button              | styled button                                               | <input type="button">, <input type="submit">, <button>                                                     |
-| transparent-button  | styled transparent button                                   | <input type="button", <input type="submit">, <button>                                                      |
-| loading-circle      | simple loading indicator                                    | <div>                                                                                                      |
+| ELEMENT             | DESCRIPTION                                                 | CAN BE USED ON                                                                                                          |
+| ------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| textbox             | styled input text                                           | &lt;input type="text"&gt;, &lt;input type="password"&gt;, &lt;input type="search"&gt;, &lt;input type="email"&gt;       |
+| large-quote         | styled large quote in the middle of the screen              | &lt;div&gt;, &lt;span&gt;                                                                                               |
+| inline-quotes       | styled small inline quote                                   | &lt;span&gt;                                                                                                            |
+| switch              | styled switch in stead of checkbox                          | &lt;input type="checkbox"&gt;                                                                                           |
+| checkbox            | styled checkbox in stead of browser default checkbox        | &lt;input type="checkbox"&gt;                                                                                           |
+| button              | styled button                                               | &lt;input type="button"&gt;, &lt;input type="submit"&gt;, &lt;button&gt;                                                |
+| transparent-button  | styled transparent button                                   | &lt;input type="button"&gt;, &lt;input type="submit"&gt;, &lt;button&gt;                                                |
+| loading-circle      | simple loading indicator                                    | &lt;div&gt;                                                                                                             |
 
 ## Properties
 
