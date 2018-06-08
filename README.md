@@ -10,7 +10,7 @@ This is still an alpha version, please remember that this project may contain bu
 
 You can use WebbleDash by using the attribute data-wdash="**ELEMENT_NAME**" on one of the supported elements for that element.
 
-_see [cheat_sheet.txt](../master/cheat_sheet.txt) for more info_
+_see [cheat_sheet.md](../master/cheat_sheet.md) for more info_
 
 ## Examples
 
