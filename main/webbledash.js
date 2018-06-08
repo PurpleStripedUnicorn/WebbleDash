@@ -342,7 +342,7 @@ $( document ).ready(function () {
         $( this ).after(
             "<div style='"+style_add+" background-color: "+(sc ? second_theme_color : theme_color)+";' data-ddash='visible-checkbox' onclick='wdash_checkbox_change_prop("+index+")'>"+
                 "<svg viewbox='0 0 52 52'>"+
-                    "<path class='checkmark' fill='none' d='M10 29 l8 8 l23 -23' />"+
+                    "<path fill='none' d='M10 29 l8 8 l23 -23' />"+
                 "</svg>"+
             "</div>"
         );
