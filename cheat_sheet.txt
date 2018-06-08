@@ -14,6 +14,8 @@ checkbox            | styled checkbox in stead of browser default checkbox      
 button              | styled button                                               | <input type="button">, <input type="submit">, <button>
 transparent-button  | styled transparent button                                   | <input type="button", <input type="submit">, <button>
 loading-circle      | simple loading indicator                                    | <div>
+title               | WebbleDash styled title                                     | <h1>, <h2>, <h3>, <h4>, <h5>, <h6>
+text                | styled text                                                 | <p>
 
 PROPERTY NAME       | DESCRIPTION                                                           | CAN BE USED ON (data-wdash=***)
 --------------------+-----------------------------------------------------------------------+---------------------------

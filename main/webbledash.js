@@ -442,6 +442,44 @@ $( document ).ready(function () {
 
 
 
+    // -----
+    // title
+    // -----
+    d( "title", "h1,h2,h3,h4,h5,h6" ).each(function () {
+
+        // add ddash to element
+        $( this ).attr( "data-ddash", "title" );
+
+    });
+
+
+
+
+
+
+
+
+
+
+    // -----
+    // text
+    // -----
+    d( "text", "p" ).each(function () {
+
+        // add ddash to element
+        $( this ).attr( "data-ddash", "text" );
+
+    });
+
+
+
+
+
+
+
+
+
+
 
 
     // code afterwards

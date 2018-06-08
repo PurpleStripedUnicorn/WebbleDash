@@ -490,3 +490,69 @@ This is to only let the script decide which elements are valid for usage
         transform: rotate(360deg);
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* titles */
+/* main title */
+h1[data-ddash=title] {
+    font-size: 2.7em;
+    margin: .5em 0 .5em 0;
+    padding: .2em 0;
+    text-align: center;
+    background-color: #e9e9e9;
+    color: #808080;
+    border-radius: .1em;
+}
+/* subtitles */
+h2[data-ddash=title] {
+    font-size: 1.5em;
+    margin: 1.3em 0 .6em 0;
+}
+/* smaller title */
+h3[data-ddash=title] {
+    font-size: 1.25em;
+    margin: 1.1em 0 .6em 0;
+}
+/* h4 title */
+h4[data-ddash=title] {
+    font-size: 1.11em;
+    margin: .95em 0 .6em 0;
+}
+/* h5 title */
+h5[data-ddash=title] {
+    font-size: 1em;
+    margin: .95em 0 .6em 0;
+}
+/* h6 title */
+h6[data-ddash=title] {
+    font-size: 1em;
+    margin: .95em 0 .6em 0;
+    color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+/* text */
+[data-ddash=text] {
+    font-size: 1em;
+    margin: .15em;
+    line-height: 149%;
+}
+[data-ddash=text] + [data-ddash=text] {
+    margin-top: 1em;
+}
