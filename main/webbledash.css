@@ -83,6 +83,57 @@ this is the style for when the js is not fully executed yet
 
 
 
+/* button */
+[data-wdash=button]:not([data-ddash=button]) {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    background-color: #eee;
+    color: transparent;
+    border: .17em solid transparent;
+    border-radius: 5px;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: border .17s, color .17s;
+    outline: none;
+    box-sizing: border-box;
+    height: 2.6em;
+    font-family: sans-serif !important;
+}
+
+
+
+
+
+/* transparent button */
+[data-wdash=transparent-button]:not([data-ddash=transparent-button]) {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    border: .17em solid transparent;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #eee;
+    color: transparent;
+    font-size: .85em;
+    cursor: pointer;
+    transition: border .17s, color .17s;
+    outline: none;
+    box-sizing: border-box;
+    height: 2.6em;
+}
+
+
+
+
+
+/* checkbox */
+[data-wdash=checkbox]:not([data-ddash=checkbox]) {
+    display: none;
+}
+
+
+
+
+
 
 
 
@@ -415,7 +466,7 @@ This is to only let the script decide which elements are valid for usage
 
 
 
-/* button */
+/* transparent button */
 [data-ddash=transparent-button] {
     padding-left: 1.2em;
     padding-right: 1.2em;
