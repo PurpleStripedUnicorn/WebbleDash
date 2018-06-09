@@ -1,0 +1,113 @@
+<!--
+
+This is an example
+Please go to the WebbleDash github page for more examples and info
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Register form</title>
+
+    <!-- custom font: 'Maven Pro' -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:500" rel="stylesheet">
+
+    <!-- always include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- include WebbleDash -->
+    <script src="../main/webbledash.js"></script>
+    <link rel="stylesheet" type="text/css" href="../main/webbledash.css" />
+
+    <!-- styling -->
+    <style>
+
+    #form_container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        height: auto;
+    }
+
+    #form_container > form {
+        margin: 0 auto;
+        width: auto;
+        display: block;
+        width: 260px;
+    }
+
+    .form_row {
+        width: 100%;
+        display: block;
+    }
+
+    #submit_container {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #terms_table {
+        color: grey;
+        font-family: "Maven Pro", sans-serif;
+        font-size: .9em;
+        margin-top: 5px;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- set the default font for all WebbleDash elements -->
+    <div data-wdash-var="default-font" data-wdash-value="Maven Pro, sans-serif"></div>
+
+    <!-- box for login form -->
+    <div id="form_container">
+        <form method="post">
+
+            <div class="form_row">
+                <input type="text" name="username" data-wdash="textbox" placeholder="username" />
+            </div>
+
+            <div class="form_row">
+                <input type="text" name="email" data-wdash="textbox" placeholder="email" />
+            </div>
+
+            <div class="form_row">
+                <input type="password" name="password" data-wdash="textbox" placeholder="password" />
+            </div>
+
+            <div class="form_row">
+                <input type="password" name="password_confirm" data-wdash="textbox" placeholder="confirm password" />
+            </div>
+
+            <div class="form_row">
+                <table id="terms_table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="terms_agree" data-wdash="checkbox" />
+                            </td>
+                            <td>
+                                I agree to the terms and services
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form_row" id="submit_container">
+                <input type="submit" data-wdash="button" value="Register" />
+                <input type="button" data-wdash="transparent-button" value="Login" />
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
