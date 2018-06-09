@@ -1,0 +1,80 @@
+<!--
+
+This is an example
+Please go to the WebbleDash github page for more examples and info
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Login form</title>
+
+    <!-- custom font: 'Maven Pro' -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:500" rel="stylesheet">
+
+    <!-- always include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- include WebbleDash -->
+    <script src="../main/webbledash.js"></script>
+    <link rel="stylesheet" type="text/css" href="../main/webbledash.css" />
+
+    <!-- styling -->
+    <style>
+
+    #form_container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        height: auto;
+    }
+
+    #form_container > form {
+        margin: 0 auto;
+        width: auto;
+        display: block;
+        width: 260px;
+    }
+
+    .form_row {
+        width: 100%;
+        display: block;
+    }
+
+    #submit_container {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- set the default font for all WebbleDash elements -->
+    <div data-wdash-var="default-font" data-wdash-value="Maven Pro, sans-serif"></div>
+
+    <!-- box for login form -->
+    <div id="form_container">
+        <form method="post">
+            <div class="form_row">
+                <input type="text" name="username" data-wdash="textbox" placeholder="username" />
+            </div>
+            <div class="form_row">
+                <input type="password" name="password" data-wdash="textbox" placeholder="password" />
+            </div>
+            <div class="form_row" id="submit_container">
+                <input type="submit" data-wdash="button" value="Log in" />
+                <input type="button" data-wdash="transparent-button" value="Register" />
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
