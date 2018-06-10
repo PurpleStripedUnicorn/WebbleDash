@@ -32,3 +32,4 @@ To set a property op the object:
 | PROPERTY NAME       | DESCRIPTION                                                           | CAN BE USED ON (data-wdash=***)   |
 | ------------------- | --------------------------------------------------------------------- | --------------------------------- |
 | size                | used to change the Width+Height of certain webbledash objects         | checkbox, loading-circle          |
+| accent-border       | used to add a second border to element                                | textbox                           |
