@@ -600,9 +600,9 @@ h6[data-ddash=title] {
 
 /* text */
 [data-ddash=text] {
-    font-size: 1em;
+    font-size: 1.05em;
     margin: .15em;
-    line-height: 149%;
+    line-height: 164%;
 }
 [data-ddash=text] + [data-ddash=text] {
     margin-top: 1em;
