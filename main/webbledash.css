@@ -505,8 +505,25 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=textbox-wrapper]:hover [data-ddash=textbox]:not(:disabled):not(:focus) + [data-ddash=textbox-placeholder] > div {
     color: #b0b0b0;
 }
+[data-ddash=textbox-wrapper] [data-ddash=textbox]:not(:focus) + [data-ddash=textbox-second-border] {
+    background-color: transparent !important;
+}
 [data-ddash=textbox-wrapper][data-ddash-placeholder-shown=false] [data-ddash=textbox-placeholder] {
     display: none;
+}
+/* second border */
+[data-ddash=textbox-second-border] {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    background-color: #ddd;
+    z-index: -1;
+    border-radius: 7px;
+    box-sizing: border-box;
+    opacity: .2;
+    transition: all .1s;
 }
 /* placeholder */
 [data-ddash=textbox-placeholder] {
@@ -516,6 +533,7 @@ This is to only let the script decide which elements are valid for usage
     right: 0;
     bottom: 0;
     cursor: text;
+    transition: all .1s;
 }
 [data-ddash=textbox-placeholder] > div {
     position: absolute;
@@ -526,6 +544,7 @@ This is to only let the script decide which elements are valid for usage
     letter-spacing: .3px;
     color: #c0c0c0;
     display: block;
+    transition: all .1s;
 }
 
 

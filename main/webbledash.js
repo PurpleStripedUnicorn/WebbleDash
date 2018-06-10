@@ -10,7 +10,7 @@ WebbleDash was made by PurpleStripedUnicorn
 
 
 
-// define variabled so they are global
+// define variables so they are global
 var theme_color;
 var second_theme_color;
 var font;
@@ -151,6 +151,11 @@ $( document ).ready(function () {
 
 
 
+
+
+
+
+
     // -----
     // textboxes
     // -----
@@ -167,6 +172,11 @@ $( document ).ready(function () {
 
         // add parent element to textbox
         $( this ).wrap("<div data-ddash='textbox-wrapper' data-ddash-placeholder-shown='true'></div>");
+
+        // add the second border to the textbox
+        // this is in the form of a div,
+        //   because standard html doesn't support double borders
+        $( this ).parent().append( "<div data-ddash='textbox-second-border' style='background-color: "+(sc ? second_theme_color : theme_color)+"'></div>" );
 
         // check if the input has a placeholder
         if ($( this ).is("[placeholder]")) {
