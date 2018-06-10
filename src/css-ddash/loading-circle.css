@@ -1,0 +1,45 @@
+/* loading circle */
+[data-ddash=loading-circle] {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    overflow: hidden; /* hide overflow to prevent bugs from happening */
+}
+/* svg to draw loading circle on, this is the elements that spins */
+[data-ddash=loading-circle] > svg {
+    /* setting animation to element */
+    -webkit-animation: loading-circle-rotate .7s linear infinite;
+    animation: loading-circle-rotate .7s linear infinite;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+
+}
+/* the actual circle */
+[data-ddash=loading-circle] > svg > circle {
+    stroke-width: 5px;
+    stroke-dasharray: 100,200;
+    stroke-dashoffset: -100;
+    stroke-linecap: round;
+}
+/* animations for the loading circles */
+@-webkit-keyframes loading-circle-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loading-circle-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

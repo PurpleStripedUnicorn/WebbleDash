@@ -1,0 +1,19 @@
+/* button */
+[data-ddash=button] {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    background-color: transparent;
+    border: .17em solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    color: white;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: border .17s, color .17s;
+    outline: none;
+    box-sizing: border-box;
+    height: 2.6em;
+}
+[data-ddash=button]:focus,
+[data-ddash=button]:hover {
+    border-color: rgba(255, 255, 255, .35);
+}

@@ -9,6 +9,15 @@ WebbleDash was made by PurpleStripedUnicorn
 */
 
 
+
+// define variabled so they are global
+var theme_color;
+var second_theme_color;
+var font;
+
+
+
+
 // -----
 // functions
 // -----
@@ -111,9 +120,9 @@ $( document ).ready(function () {
     // preload
     // > check for variables set in the document
     // -----
-    var theme_color = "#7de37d"; // default theme color
-    var second_theme_color = "#7de3e3"; // default second theme color
-    var font = "sans-serif"; // default font to use on all WebbleDash elements
+    theme_color = "#7de37d"; // default theme color
+    second_theme_color = "#7de3e3"; // default second theme color
+    font = "sans-serif"; // default font to use on all WebbleDash elements
     $( "div[data-wdash-var]" ).each(function () {
         if ($( this ).is( "[data-wdash-value]" )) {
 

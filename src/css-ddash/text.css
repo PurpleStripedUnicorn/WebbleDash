@@ -1,0 +1,9 @@
+/* text */
+[data-ddash=text] {
+    font-size: 1.05em;
+    margin: .15em;
+    line-height: 164%;
+}
+[data-ddash=text] + [data-ddash=text] {
+    margin-top: 1em;
+}

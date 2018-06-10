@@ -1,0 +1,4 @@
+/* checkbox */
+[data-wdash=checkbox]:not([data-ddash=checkbox]) {
+    display: none;
+}

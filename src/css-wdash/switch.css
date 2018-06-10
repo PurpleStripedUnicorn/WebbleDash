@@ -1,0 +1,15 @@
+/* switch */
+[data-wdash=switch]:not([data-ddash=switch]) {
+    /* display: none; */
+}
+[data-wdash=switch]:not([data-ddash=switch])::before {
+    content: "";
+    display: block;
+    border-radius: 7px;
+    width: 84px;
+    height: 36px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid #d0d0d0;
+    position: relative;
+}
