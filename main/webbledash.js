@@ -176,7 +176,9 @@ $( document ).ready(function () {
         // add the second border to the textbox
         // this is in the form of a div,
         //   because standard html doesn't support double borders
-        $( this ).parent().append( "<div data-ddash='textbox-second-border' style='background-color: "+(sc ? second_theme_color : theme_color)+"'></div>" );
+        if ( $( this ).is("[data-wdash-prop-accent-border=true]") ) {
+            $( this ).parent().append( "<div data-ddash='textbox-second-border' style='background-color: "+(sc ? second_theme_color : theme_color)+"'></div>" );
+        }
 
         // check if the input has a placeholder
         if ($( this ).is("[placeholder]")) {
