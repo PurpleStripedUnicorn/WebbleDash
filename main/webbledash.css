@@ -472,6 +472,7 @@ This is to only let the script decide which elements are valid for usage
     display: inline-block;
     margin: 2px;
     position: relative;
+    max-width: calc(100% - 4px);
 }
 [data-ddash=textbox-wrapper] [data-ddash=textbox] {
     border-radius: 4px;
@@ -483,6 +484,7 @@ This is to only let the script decide which elements are valid for usage
     transition: all .1s;
     color: black;
     background-color: white;
+    max-width: 100%;
 }
 [data-ddash=textbox-wrapper]:hover [data-ddash=textbox]:not(:disabled):not(:focus) {
     border-color: #c0c0c0 !important; /* !important to override the inline styling */
