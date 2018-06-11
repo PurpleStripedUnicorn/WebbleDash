@@ -6,7 +6,7 @@
 
 ELEMENT             | DESCRIPTION                                                 | CAN BE USED ON
 --------------------+-------------------------------------------------------------+---------------------------
-textbox             | styled input text                                           | <input type="text">, <input type="password">, <input type="search">, <input type="email">
+textbox             | styled input text                                           | <input type="text">, <input type="password">, <input type="search">, <input type="email">, <input type="number">
 large-quote         | styled large quote in the middle of the screen              | <div>, <span>
 inline-quotes       | styled small inline quote                                   | <span>
 switch              | styled switch in stead of checkbox                          | <input type="checkbox">
