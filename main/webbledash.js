@@ -10,6 +10,10 @@ WebbleDash was made by PurpleStripedUnicorn
 
 
 
+// -----
+// variables
+// -----
+
 // define variables so they are global
 var theme_color;
 var second_theme_color;
@@ -176,7 +180,7 @@ function inp_number_transform (element) {
         element.val(new_value);
 
     });
-    
+
 }
 
 
