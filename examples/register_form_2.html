@@ -1,0 +1,97 @@
+<!--
+
+This is an example
+Please go to the WebbleDash github page for more examples and info
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Registration form template</title>
+
+    <!-- custom font: 'Maven Pro' -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:500" rel="stylesheet">
+
+    <!-- always include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- include WebbleDash -->
+    <script src="../main/webbledash.js"></script>
+    <link rel="stylesheet" type="text/css" href="../main/webbledash.css" />
+
+    <!-- styling -->
+    <style>
+
+    body {
+        font-family: "Maven Pro", sans-serif;
+    }
+
+    #form_container {
+        width: 100%;
+        padding: 60px 40px;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    #form_container > form {
+        width: auto;
+        display: block;
+        width: 100%;
+    }
+
+    #main_title {
+        color: #333;
+        margin-top: 0;
+    }
+
+    .row {
+        margin: 2px 0;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- set the default font for all WebbleDash elements -->
+    <div data-wdash-var="default-font" data-wdash-value="Maven Pro, sans-serif"></div>
+
+    <!-- box for login form -->
+    <div id="form_container">
+        <form>
+
+            <!-- MAIN TITLE -->
+            <h1 id="main_title">Registration form template</h1>
+
+            <!-- FIRST ROW -->
+            <div class="row">
+                <!-- First name of the user -->
+                <input type="text" name="first-name" placeholder="First name" data-wdash="textbox" style="width: 150px;" data-wdash-prop-accent-border="true" />
+                <!-- Last name of the user -->
+                <input type="text" name="last-name" placeholder="Last name" data-wdash="textbox" style="width: 272px;" data-wdash-prop-accent-border="true" />
+            </div>
+
+            <!-- SECOND ROW -->
+            <div class="row">
+                <!-- Email -->
+                <input type="email" name="email" placeholder="Email" data-wdash="textbox" style="width: 430px;" data-wdash-prop-accent-border="true" />
+            </div>
+
+            <!-- THIRD ROW -->
+            <div class="row">
+                <!-- Number amount -->
+                <input type="number" name="salary" placeholder="Monthly salary in dollars" data-wdash="textbox" style="width: 430px;" data-wdash-prop-accent-border="true" />
+            </div>
+
+            <!-- SUBMITTING ROW -->
+            <div class="row" style="margin: 10px 0 0 3px;">
+                <!-- Submit button -->
+                <input type="submit" data-wdash="button" value="Sign up" />
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
