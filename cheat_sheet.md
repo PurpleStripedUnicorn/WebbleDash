@@ -12,6 +12,8 @@ To set a property op the object:
 <html-tag data-wdash-prop-PROPERTYNAME="PROPERTYVALUE">
 ```
 
+_For examples see [features.html](../master/exaples/features.html)_
+
 ## Elements
 
 | ELEMENT             | DESCRIPTION                                                 | CAN BE USED ON                                                                                                          |
