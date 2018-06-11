@@ -10,6 +10,9 @@ WebbleDash was made by PurpleStripedUnicorn
 
 
 
+
+
+
 // -----
 // variables
 // -----
@@ -18,6 +21,11 @@ WebbleDash was made by PurpleStripedUnicorn
 var theme_color;
 var second_theme_color;
 var font;
+
+
+
+
+
 
 
 
@@ -63,6 +71,11 @@ function d (name, elements /* elements are optional */) {
 
 }
 
+
+
+
+
+
 // function to check or uncheck a webbledash switch
 function wdash_switch_change_prop (index) {
     // check if the switch is already checked or not
@@ -75,6 +88,11 @@ function wdash_switch_change_prop (index) {
     }
 }
 
+
+
+
+
+
 // function to check or uncheck a webbledash checkbox
 function wdash_checkbox_change_prop (index) {
     // check if the checkbox is already checked or not
@@ -86,6 +104,11 @@ function wdash_checkbox_change_prop (index) {
         $( "[data-ddash-checkbox-index="+index+"]" ).prop( "checked", true );
     }
 }
+
+
+
+
+
 
 // function for removing spaces at the start or at the end of a string
 function remove_unneeded_spaces (string) {
@@ -105,6 +128,11 @@ function remove_unneeded_spaces (string) {
     // return result with last and first space removed
     return string;
 }
+
+
+
+
+
 
 // function for transforming the input[type=number] with textbox elements
 function inp_number_transform (element) {
@@ -182,6 +210,9 @@ function inp_number_transform (element) {
     });
 
 }
+
+
+
 
 
 
