@@ -16,7 +16,7 @@ To set a property op the object:
 
 | ELEMENT             | DESCRIPTION                                                 | CAN BE USED ON                                                                                                          |
 | ------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| textbox             | styled input text                                           | &lt;input type="text"&gt;, &lt;input type="password"&gt;, &lt;input type="search"&gt;, &lt;input type="email"&gt;       |
+| textbox             | styled input text                                           | &lt;input type="text"&gt;, &lt;input type="password"&gt;, &lt;input type="search"&gt;, &lt;input type="email"&gt;, &lt;input type="number"&gt;  |
 | large-quote         | styled large quote in the middle of the screen              | &lt;div&gt;, &lt;span&gt;                                                                                               |
 | inline-quotes       | styled small inline quote                                   | &lt;span&gt;                                                                                                            |
 | switch              | styled switch in stead of checkbox                          | &lt;input type="checkbox"&gt;                                                                                           |
