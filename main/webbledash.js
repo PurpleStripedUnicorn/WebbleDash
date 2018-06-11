@@ -102,6 +102,81 @@ function remove_unneeded_spaces (string) {
     return string;
 }
 
+// function for transforming the input[type=number] with textbox elements
+function inp_number_transform (element) {
+    // add ddash number property
+    element.attr( "data-wdash-prop-textbox-type", "number" );
+
+    // change the number input to a text input
+    element.attr( "type", "text" );
+
+    // add a function for when the element receives focus
+    element.on( "focus", function () {
+
+        // remove all non-numberic characters from the value
+        // get the value of the element
+        var value = element.val();
+        var arr = value.split("");
+        var new_value = "";
+
+        // loop through all of the characters
+        for (i = 0; i < arr.length; i++) {
+            // check if character is numeric
+            if (!isNaN(parseFloat(arr[i])) && isFinite(arr[i])) {
+                // add the character to the string of the result value
+                new_value += String(arr[i]);
+            }
+        }
+
+        // set new value to be the value of the element
+        element.val( new_value );
+
+    });
+
+    // add a function for when the element loses focus
+    element.on( "blur", function () {
+
+        // check if the value contains any characters
+        //   that aren't numbers and remove them
+        // get the value of the element
+        var value = element.val();
+        var arr = value.split("");
+        var new_value = "";
+
+        // loop though all the characters and only add numeric ones
+        for (i = 0; i < arr.length; i++) {
+            // check if character is numeric
+            if (!isNaN(parseFloat(arr[i])) && isFinite(arr[i])) {
+                // add the character to the string of the result value
+                new_value += String(arr[i]);
+            }
+        }
+
+        // add thousand separators to the string
+        // split the string into 2 parts: before and after the dot
+        var x = new_value.split('.');
+        // before the dot
+        var x1 = x[0];
+        // after the dot
+        var x2 = x.length > 1 ? '.' + x[1] : '';
+        // split the first part into smaller parts of 2 characters long
+        var rgx = /(\d+)(\d{3})/;
+        // loop through groups of three
+        while (rgx.test(x1)) {
+            // add comma as thousand separator
+            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+        }
+        // set the new_value variable to be with
+        //   thousand separators
+        new_value = x1 + x2;
+
+        // set the value of the input to be
+        //   the new value that was generated
+        element.val(new_value);
+
+    });
+}
+
 
 
 
@@ -179,77 +254,10 @@ $( document ).ready(function () {
         // if this is the case, add special rules
         if ($( this ).is("input[type=number]")) {
 
-            // add ddash number property
-            $( this ).attr( "data-wdash-prop-textbox-type", "number" );
+            // function for input type number
+            inp_number_transform($( this ));
 
-            // change the number input to a text input
-            $( this ).attr( "type", "text" );
 
-            // add a function for when the element receives focus
-            $( this ).on( "focus", function () {
-
-                // remove all non-numberic characters from the value
-                // get the value of the element
-                var value = $( this ).val();
-                var arr = value.split("");
-                var new_value = "";
-
-                // loop through all of the characters
-                for (i = 0; i < arr.length; i++) {
-                    // check if character is numeric
-                    if (!isNaN(parseFloat(arr[i])) && isFinite(arr[i])) {
-                        // add the character to the string of the result value
-                        new_value += String(arr[i]);
-                    }
-                }
-
-                // set new value to be the value of the element
-                $( this ).val( new_value );
-
-            });
-
-            // add a function for when the element loses focus
-            $( this ).on( "blur", function () {
-
-                // check if the value contains any characters
-                //   that aren't numbers and remove them
-                // get the value of the element
-                var value = $( this ).val();
-                var arr = value.split("");
-                var new_value = "";
-
-                // loop though all the characters and only add numeric ones
-                for (i = 0; i < arr.length; i++) {
-                    // check if character is numeric
-                    if (!isNaN(parseFloat(arr[i])) && isFinite(arr[i])) {
-                        // add the character to the string of the result value
-                        new_value += String(arr[i]);
-                    }
-                }
-
-                // add thousand separators to the string
-                // split the string into 2 parts: before and after the dot
-                var x = new_value.split('.');
-                // before the dot
-                var x1 = x[0];
-                // after the dot
-                var x2 = x.length > 1 ? '.' + x[1] : '';
-                // split the first part into smaller parts of 2 characters long
-                var rgx = /(\d+)(\d{3})/;
-                // loop through groups of three
-                while (rgx.test(x1)) {
-                    // add comma as thousand separator
-                    x1 = x1.replace(rgx, '$1' + ',' + '$2');
-                }
-                // set the new_value variable to be with
-                //   thousand separators
-                new_value = x1 + x2;
-
-                // set the value of the input to be
-                //   the new value that was generated
-                $( this ).val(new_value);
-
-            });
 
         }
 
