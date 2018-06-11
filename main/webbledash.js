@@ -104,6 +104,7 @@ function remove_unneeded_spaces (string) {
 
 // function for transforming the input[type=number] with textbox elements
 function inp_number_transform (element) {
+
     // add ddash number property
     element.attr( "data-wdash-prop-textbox-type", "number" );
 
@@ -175,6 +176,7 @@ function inp_number_transform (element) {
         element.val(new_value);
 
     });
+    
 }
 
 
