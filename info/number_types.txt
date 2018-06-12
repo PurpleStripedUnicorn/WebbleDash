@@ -1,0 +1,16 @@
+name                text before     text after
+
+dollar              $
+euro                €
+yen                 ¥
+pound               £
+yuan                ¤
+meter                               m
+second                              s
+kilogram                            kg
+candela                             cd
+kelvin                              K
+ampere                              A
+mol                                 mol
+kilometer                           km
+mile                                miles
