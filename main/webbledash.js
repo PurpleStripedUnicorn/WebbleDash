@@ -155,7 +155,7 @@ function inp_number_transform (element) {
         // loop through all of the characters
         for (i = 0; i < arr.length; i++) {
             // check if character is numeric
-            if (!isNaN(parseFloat(arr[i])) && isFinite(arr[i])) {
+            if ((!isNaN(parseFloat(arr[i])) && isFinite(arr[i])) || arr[i] === ".") {
                 // add the character to the string of the result value
                 new_value += String(arr[i]);
             }
@@ -179,11 +179,12 @@ function inp_number_transform (element) {
         // loop though all the characters and only add numeric ones
         for (i = 0; i < arr.length; i++) {
             // check if character is numeric
-            if (!isNaN(parseFloat(arr[i])) && isFinite(arr[i])) {
+            if ((!isNaN(parseFloat(arr[i])) && isFinite(arr[i])) || arr[i] === ".") {
                 // add the character to the string of the result value
                 new_value += String(arr[i]);
             }
         }
+
 
         // add thousand separators to the string
         // split the string into 2 parts: before and after the dot
@@ -202,6 +203,34 @@ function inp_number_transform (element) {
         // set the new_value variable to be with
         //   thousand separators
         new_value = x1 + x2;
+
+
+        // check if there is a number type set and apply it
+        // first, make a list of all number type and character combinations
+        // TEMPLATE:   name: [before_string, after_string]
+        var types = {
+            dollar: ["$", ""],
+            euro: ["€", ""],
+            meter: ["", "m"]
+        };
+
+        // check if the element has a type assigned
+        if ($( this ).is("[data-wdash-prop-number-type]")) {
+            // get the value of the number type attribute
+            var num_type = $( this ).attr( "data-wdash-prop-number-type" );
+            // check if the number type is valid
+            if (types[num_type] != undefined) {
+                // add the text before and after the number
+                // it first checks which strings are empty,
+                //   if they're not, add a space before/after them
+                new_value = types[num_type][0] +
+                            (types[num_type][0] === "" ? "" : " ") +
+                            new_value +
+                            (types[num_type][1] === "" ? "" : " ") +
+                            types[num_type][1];
+            }
+        }
+
 
         // set the value of the input to be
         //   the new value that was generated
