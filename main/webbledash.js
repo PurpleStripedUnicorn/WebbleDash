@@ -134,6 +134,21 @@ function remove_unneeded_spaces (string) {
 
 
 
+function check_textbox_inp (obj) {
+    if (obj.val() === "") {
+        // show placeholder
+        obj.parent().attr("data-ddash-placeholder-shown", "true");
+    } else {
+        // hide placeholder
+        obj.parent().attr("data-ddash-placeholder-shown", "false");
+    }
+}
+
+
+
+
+
+
 // function for transforming the input[type=number] with textbox elements
 function inp_number_transform (element) {
 
@@ -163,6 +178,9 @@ function inp_number_transform (element) {
 
         // set new value to be the value of the element
         element.val( new_value );
+
+        // redecide if placeholder should be shown or not
+        check_textbox_inp(element);
 
     });
 
@@ -229,7 +247,8 @@ function inp_number_transform (element) {
         };
 
         // check if the element has a type assigned
-        if ($( this ).is("[data-wdash-prop-number-type]")) {
+        // also check if the value is NOT empty
+        if ($( this ).is("[data-wdash-prop-number-type]") && new_value.replace(/ /g, "") > 0) {
             // get the value of the number type attribute
             var num_type = $( this ).attr( "data-wdash-prop-number-type" );
             // check if the number type is valid
@@ -249,6 +268,9 @@ function inp_number_transform (element) {
         // set the value of the input to be
         //   the new value that was generated
         element.val(new_value);
+
+        // redecide if placeholder should be shown or not
+        check_textbox_inp(element);
 
     });
 
@@ -337,8 +359,6 @@ $( document ).ready(function () {
             // function for input type number
             inp_number_transform($( this ));
 
-
-
         }
 
 
@@ -370,13 +390,7 @@ $( document ).ready(function () {
             // when the value of the input text element changes,
             // check if the value is empty or not and choose to diplay placeholder
             $( this ).on( "paste keyup change keydown input", function () {
-                if (a.val() === "") {
-                    // show placeholder
-                    a.parent().attr("data-ddash-placeholder-shown", "true");
-                } else {
-                    // hide placeholder
-                    a.parent().attr("data-ddash-placeholder-shown", "false");
-                }
+                check_textbox_inp(a);
             } );
         }
 
