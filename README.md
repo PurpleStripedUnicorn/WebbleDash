@@ -2,7 +2,7 @@
 
 WebbleDash is a small jQuery add-on to make the life of a web-developer easier.
 
-Please include the WebbleDash folder in your project to use WebbleDash correctly. Please refer to the file inside the "main" directory ([webbledash.css](../master/main/webbledash.css) and [webbledash.js](../master/main/webbledash.js)) when you are using WebbleDash for yourself. Also inlcude jQuery. See the example below:
+Please include the WebbleDash folder in your project to use WebbleDash correctly. Please refer to the files inside the "main" directory ([webbledash.css](../master/main/webbledash.css) and [webbledash.js](../master/main/webbledash.js)) when you are using WebbleDash in a html file. Also make sure you include jQuery. See the example below:
 
 ```html
 <head>
