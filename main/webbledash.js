@@ -209,9 +209,23 @@ function inp_number_transform (element) {
         // first, make a list of all number type and character combinations
         // TEMPLATE:   name: [before_string, after_string]
         var types = {
+            // currencies
             dollar: ["$", ""],
             euro: ["€", ""],
-            meter: ["", "m"]
+            yen: ["¥", ""],
+            pound: ["£", ""],
+            yuan: ["¤", ""],
+            // SI base units
+            meter: ["", "m"],
+            second: ["", "s"],
+            kilogram: ["", "kg"],
+            candela: ["", "cd"],
+            kelvin: ["", "K"],
+            ampere: ["", "A"],
+            mol: ["", "mol"],
+            // units for distance
+            kilometer: ["", "km"],
+            mile: ["", "miles"]
         };
 
         // check if the element has a type assigned
