@@ -248,7 +248,7 @@ function inp_number_transform (element) {
 
         // check if the element has a type assigned
         // also check if the value is NOT empty
-        if ($( this ).is("[data-wdash-prop-number-type]") && new_value.replace(/ /g, "") > 0) {
+        if ($( this ).is("[data-wdash-prop-number-type]") && new_value.replace(/ /g, "").length > 0) {
             // get the value of the number type attribute
             var num_type = $( this ).attr( "data-wdash-prop-number-type" );
             // check if the number type is valid
