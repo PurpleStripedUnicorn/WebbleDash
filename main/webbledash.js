@@ -158,7 +158,36 @@ function inp_number_transform (element) {
     // change the number input to a text input
     element.attr( "type", "text" );
 
+    // add a function to restore the original number when submitting the form
+    // this prevents showing comma's and units when retrieving GET or POST info
+    // first, detect the first parent in the dom tree that is a form:
+    element.closest("form").on( "submit", function () {
+
+        // remove all non-numberic characters from the value
+        // get the value of the element
+        var value = element.val();
+        // transform value to be array
+        var arr = value.split("");
+        // prepate the new value
+        var new_value = "";
+
+        // loop through all of the characters
+        for (i = 0; i < arr.length; i++) {
+            // check if character is numeric
+            if ((!isNaN(parseFloat(arr[i])) && isFinite(arr[i])) || arr[i] === ".") {
+                // add the character to the string of the result value
+                new_value += String(arr[i]);
+            }
+        }
+
+        // set new value to be the value of the element
+        // this makes sure the form just reads a number
+        element.val( new_value );
+
+    });
+
     // add a function for when the element receives focus
+    // it makes the non-numerical characters disappear
     element.on( "focus", function () {
 
         // remove all non-numberic characters from the value
@@ -185,6 +214,7 @@ function inp_number_transform (element) {
     });
 
     // add a function for when the element loses focus
+    // it makes the non-numerical characters appear
     element.on( "blur", function () {
 
         // check if the value contains any characters
