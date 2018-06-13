@@ -1,16 +1,17 @@
-name                text before     text after
+name                text before     text after      thousand separators
 
-dollar              $
-euro                €
-yen                 ¥
-pound               £
-yuan                ¤
-meter                               m
-second                              s
-kilogram                            kg
-candela                             cd
-kelvin                              K
-ampere                              A
-mol                                 mol
-kilometer                           km
-mile                                miles
+dollar              $                               y
+euro                €                               y
+yen                 ¥                               y
+pound               £                               y
+yuan                ¤                               y
+meter                               m               y
+second                              s               y
+kilogram                            kg              y
+candela                             cd              y
+kelvin                              K               y
+ampere                              A               y
+mol                                 mol             y
+kilometer                           km              y
+mile                                miles           y
+thousands                                           y

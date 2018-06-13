@@ -261,25 +261,6 @@ function inp_number_transform (element) {
         }
 
 
-        // add thousand separators to the string
-        // split the string into 2 parts: before and after the dot
-        var x = new_value.split('.');
-        // before the dot
-        var x1 = x[0];
-        // after the dot
-        var x2 = x.length > 1 ? '.' + x[1] : '';
-        // split the first part into smaller parts of 2 characters long
-        var rgx = /(\d+)(\d{3})/;
-        // loop through groups of three
-        while (rgx.test(x1)) {
-            // add comma as thousand separator
-            x1 = x1.replace(rgx, '$1' + ',' + '$2');
-        }
-        // set the new_value variable to be with
-        //   thousand separators
-        new_value = x1 + x2;
-
-
         // check if there is a number type set and apply it
         // first, make a list of all number type and character combinations
         // TEMPLATE:   name: [before_string, after_string]
@@ -287,50 +268,69 @@ function inp_number_transform (element) {
 
             // currencies
             dollar: {
-                before: "$"
+                before: "$",
+                thousands: true
             },
             euro: {
-                before: "€"
+                before: "€",
+                thousands: true
             },
             yen: {
-                before: "¥"
+                before: "¥",
+                thousands: true
             },
             pound: {
-                before: "£"
+                before: "£",
+                thousands: true
             },
             yuan: {
-                before: "¤"
+                before: "¤",
+                thousands: true
             },
 
             // SI base units
             meter: {
-                after: "m"
+                after: "m",
+                thousands: true
             },
             second: {
-                after: "s"
+                after: "s",
+                thousands: true
             },
             kilogram: {
-                after: "kg"
+                after: "kg",
+                thousands: true
             },
             candela: {
-                after: "cd"
+                after: "cd",
+                thousands: true
             },
             kelvin: {
-                after: "K"
+                after: "K",
+                thousands: true
             },
             ampere: {
-                after: "A"
+                after: "A",
+                thousands: true
             },
             mol: {
-                after: "mol"
+                after: "mol",
+                thousands: true
             },
 
             // units for distance
-            kilometer:{
-                after: "km"
+            kilometer: {
+                after: "km",
+                thousands: true
             },
             mile: {
-                after: "miles"
+                after: "miles",
+                thousands: true
+            },
+
+            // only adding thousand separators
+            thousands: {
+                thousands: true
             }
 
         };
@@ -342,6 +342,30 @@ function inp_number_transform (element) {
             var num_type = $( this ).attr( "data-wdash-prop-number-type" );
             // check if the number type is valid
             if (types[num_type] != undefined) {
+
+                // add thousand separators if required
+                if (types[num_type]["thousands"] == true) {
+
+                    // add thousand separators to the string
+                    // split the string into 2 parts: before and after the dot
+                    var x = new_value.split('.');
+                    // before the dot
+                    var x1 = x[0];
+                    // after the dot
+                    var x2 = x.length > 1 ? '.' + x[1] : '';
+                    // split the first part into smaller parts of 2 characters long
+                    var rgx = /(\d+)(\d{3})/;
+                    // loop through groups of three
+                    while (rgx.test(x1)) {
+                        // add comma as thousand separator
+                        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+                    }
+                    // set the new_value variable to be with
+                    //   thousand separators
+                    new_value = x1 + x2;
+
+                }
+
                 // add the text before and after the number
                 // it first checks which strings are empty,
                 //   if they're not, add a space before/after them
