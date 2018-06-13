@@ -347,7 +347,7 @@ function inp_number_transform (element) {
                 //   if they're not, add a space before/after them
                 new_value = (
                                 types[num_type]["before"] != undefined ?
-                                " " + types[num_type]["before"] :
+                                types[num_type]["before"] + " " :
                                 ""
                             ) +
                             new_value +
