@@ -149,6 +149,33 @@ function check_textbox_inp (obj) {
 
 
 
+// check if the charset is correctly set in the document
+function check_for_charset () {
+
+    // check if meta object exists with charset utf 8
+    var complete = false;
+    $( "meta" ).each(function () {
+        if ( $( this ).attr( "charset" ).toLowerCase() === "utf-8" ) {
+            // object with right charset was found
+            // set complete to true
+            complete = true;
+        }
+    });
+
+    // check if any objects were found
+    // if not, warn the user that they need to set it
+    if (!complete) {
+        // also show a warning for not including charset UTF-8
+        console.error( "There was no meta element found with charset UTF-8 set. For WebbleDash to be behaving correctly, please add <meta charset=\"UTF-8\"> to your document" );
+    }
+
+}
+
+
+
+
+
+
 // function for transforming the input[type=number] with textbox elements
 function inp_number_transform (element) {
 
@@ -305,7 +332,7 @@ function inp_number_transform (element) {
             mile: {
                 after: "miles"
             }
-            
+
         };
 
         // check if the element has a type assigned
@@ -391,6 +418,14 @@ $( document ).ready(function () {
 
         }
     });
+
+
+    // -----
+    // preload
+    // > do some basic operations
+    // -----
+    // check if the character set is correct and set to UTF-8
+    check_for_charset();
 
 
 
