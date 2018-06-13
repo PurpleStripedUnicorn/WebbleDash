@@ -260,6 +260,24 @@ function inp_number_transform (element) {
             }
         }
 
+        // erase leading zero's from new value
+        var zero_action = true;
+        while (zero_action) {
+            // check if the first character is a zero and is not proceded by a dot
+            // also check if the string doesn't just contain this zero
+            // if this the case, remove the first zero
+            if (
+                new_value.substr(0, 1) === "0" &&
+                new_value.substr(0, 2) !== "0." &&
+                new_value !== "0"
+            ) {
+                new_value = new_value.substr(1);
+            } else {
+                // if this is not the case, stop the loop
+                zero_action = false;
+            }
+        }
+
 
         // check if there is a number type set and apply it
         // first, make a list of all number type and character combinations
