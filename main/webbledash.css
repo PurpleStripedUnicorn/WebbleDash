@@ -5,6 +5,20 @@ this is the style for when the JavaScript/jQuery is not fully executed yet
 
 */
 
+/* variable elements */
+[data-wdash-var][data-wdash-value] {
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
 /* button */
 [data-wdash=button]:not([data-ddash=button]) {
     padding-left: 1.2em;

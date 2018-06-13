@@ -443,19 +443,16 @@ $( document ).ready(function () {
             // main theme color
             if ($( this ).is( "[data-wdash-var=theme-color]" )) {
                 theme_color = $( this ).attr( "data-wdash-value" );
-                $( this ).remove();
             }
 
             // second theme color
             if ($( this ).is( "[data-wdash-var=second-theme-color]" )) {
                 second_theme_color = $( this ).attr( "data-wdash-value" );
-                $( this ).remove();
             }
 
             // font
             if ($( this ).is( "[data-wdash-var=default-font]" )) {
                 font = $( this ).attr( "data-wdash-value" );
-                $( this ).remove();
             }
 
         }
