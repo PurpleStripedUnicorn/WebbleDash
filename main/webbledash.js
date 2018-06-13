@@ -257,23 +257,55 @@ function inp_number_transform (element) {
         // first, make a list of all number type and character combinations
         // TEMPLATE:   name: [before_string, after_string]
         var types = {
+
             // currencies
-            dollar: ["$", ""],
-            euro: ["€", ""],
-            yen: ["¥", ""],
-            pound: ["£", ""],
-            yuan: ["¤", ""],
+            dollar: {
+                before: "$"
+            },
+            euro: {
+                before: "€"
+            },
+            yen: {
+                before: "¥"
+            },
+            pound: {
+                before: "£"
+            },
+            yuan: {
+                before: "¤"
+            },
+
             // SI base units
-            meter: ["", "m"],
-            second: ["", "s"],
-            kilogram: ["", "kg"],
-            candela: ["", "cd"],
-            kelvin: ["", "K"],
-            ampere: ["", "A"],
-            mol: ["", "mol"],
+            meter: {
+                after: "m"
+            },
+            second: {
+                after: "s"
+            },
+            kilogram: {
+                after: "kg"
+            },
+            candela: {
+                after: "cd"
+            },
+            kelvin: {
+                after: "K"
+            },
+            ampere: {
+                after: "A"
+            },
+            mol: {
+                after: "mol"
+            },
+
             // units for distance
-            kilometer: ["", "km"],
-            mile: ["", "miles"]
+            kilometer:{
+                after: "km"
+            },
+            mile: {
+                after: "miles"
+            }
+            
         };
 
         // check if the element has a type assigned
@@ -286,11 +318,17 @@ function inp_number_transform (element) {
                 // add the text before and after the number
                 // it first checks which strings are empty,
                 //   if they're not, add a space before/after them
-                new_value = types[num_type][0] +
-                            (types[num_type][0] === "" ? "" : " ") +
+                new_value = (
+                                types[num_type]["before"] != undefined ?
+                                " " + types[num_type]["before"] :
+                                ""
+                            ) +
                             new_value +
-                            (types[num_type][1] === "" ? "" : " ") +
-                            types[num_type][1];
+                            (
+                                types[num_type]["after"] != undefined ?
+                                " " + types[num_type]["after"] :
+                                ""
+                            );
             }
         }
 
