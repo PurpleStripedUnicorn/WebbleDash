@@ -44,7 +44,7 @@ _see [features.html](../master/examples/features.html) for more examples_
 | ------------------- | -------------------------------------------------------- |
 | textbox             | styled input text                                        |
 | large-quote         | styled large quote in the middle of the screen           |
-| inline-quotes       | styled small inline quote                                |
+| inline-quote        | styled small inline quote                                |
 | switch              | styled switch in stead of checkbox                       |
 | checkbox            | styled checkbox in stead of browser default checkbox     |
 | button              | styled button                                            |
@@ -52,3 +52,4 @@ _see [features.html](../master/examples/features.html) for more examples_
 | loading-circle      | simple loading indicator                                 |
 | title               | WebbleDash styled title                                  |
 | text                | styled text                                              |
+| confirm-button      | styled button which performs action on second click      |
