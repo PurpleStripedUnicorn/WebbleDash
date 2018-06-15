@@ -45,6 +45,32 @@ this is the style for when the JavaScript/jQuery is not fully executed yet
 
 
 
+/* confirm button */
+[data-wdash=confirm-button]:not([data-ddash=confirm-button]):not([data-ddash=confirm-button-focus]) {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    background-color: #eee;
+    color: transparent;
+    border: .17em solid transparent;
+    border-radius: 5px;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: border .17s, color .17s;
+    outline: none;
+    box-sizing: border-box;
+    height: 2.6em;
+    font-family: sans-serif !important;
+}
+
+
+
+
+
+
+
+
+
+
 /* checkbox */
 [data-wdash=checkbox]:not([data-ddash=checkbox]) {
     display: none;
@@ -189,6 +215,55 @@ This is to only let the script decide which elements are valid for usage
 [data-ddash=button]:focus,
 [data-ddash=button]:hover {
     border-color: rgba(255, 255, 255, .35);
+}
+
+
+
+
+
+
+
+
+
+
+/* confirm button */
+[data-ddash=confirm-button],
+[data-ddash=confirm-button-focus] {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    background-color: transparent;
+    border-width: .17em;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: border-color .17s, color .17s, background-color .17s;
+    outline: none;
+    box-sizing: border-box;
+    height: 2.6em;
+}
+[data-ddash=confirm-button]:focus,
+[data-ddash=confirm-button]:hover,
+[data-ddash=confirm-button-focus]:focus,
+[data-ddash=confirm-button-focus]:hover {
+    border-color: rgba(255, 255, 255, .35);
+}
+/* only on normal confirm button */
+[data-ddash=confirm-button] {
+    border-color: rgba(255, 255, 255, 0) !important; /* important to override style attribute */
+    color: white !important; /* important to override style attribute */
+}
+[data-ddash=confirm-button]:focus,
+[data-ddash=confirm-button]:hover {
+    border-color: rgba(255, 255, 255, .35) !important; /* important to override style attribute */
+}
+/* only on focus */
+[data-ddash=confirm-button-focus] {
+    background-color: transparent !important; /* important to override style attribute */
+}
+[data-ddash=confirm-button-focus]:focus,
+[data-ddash=confirm-button-focus]:hover {
+    opacity: .75;
 }
 
 

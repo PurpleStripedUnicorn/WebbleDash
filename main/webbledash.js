@@ -827,6 +827,71 @@ $( document ).ready(function () {
 
 
 
+    // -----
+    // confirmation button
+    // -----
+    d( "confirm-button", "input[type=submit],input[type=button]" ).each(function () {
+
+        // check if second color or main color should be used
+        var sc = $( this ).is("[data-wdash-second-color]");
+        var tc = (sc ? second_theme_color : theme_color);
+
+        // add ddash to element
+        $( this ).attr( "data-ddash", "confirm-button" );
+
+        // add the theme color background color
+        $( this ).css( "background-color", tc );
+
+        // add theme color as border-color and text color
+        // this only has effect when clicked once
+        $( this ).css( "color", tc );
+        $( this ).css( "border-color", tc );
+
+        // separate action for each type of element
+        if ($( this ).is( "input[type=submit]" )) {
+
+            // element is a submit button
+
+            // change the type to button, so it doesn't submit the form
+            $( this ).attr( "type", "button" );
+
+            // change back to submit button when clicked on,
+            // also change text displayed and style
+            $( this ).click(function () {
+                $( this ).attr( "data-ddash", "confirm-button-focus" );
+                $( this ).val( "confirm" );
+                $( this ).attr( "type", "submit" );
+            });
+
+        } else if ($( this ).is( "input[type=button]" )) {
+
+            // element is a normal button
+
+            // change the current action to triggering the
+            //   confirm action, also save the current action for later
+            var current_action = $( this ).attr( "onclick" );
+            $( this ).attr( "onclick", "" );
+            // change action to displaying "confirm"
+            $( this ).click(function () {
+                $( this ).off( "click" );
+                $( this ).attr( "onclick", current_action );
+                $( this ).attr( "data-ddash", "confirm-button-focus" );
+                $( this ).val( "confirm" );
+            });
+
+        }
+
+    });
+
+
+
+
+
+
+
+
+
+
 
 
     // code afterwards
