@@ -13,6 +13,7 @@ switch              | styled switch in stead of checkbox                        
 checkbox            | styled checkbox in stead of browser default checkbox        | <input type="checkbox">
 button              | styled button                                               | <input type="button">, <input type="submit">, <button>
 transparent-button  | styled transparent button                                   | <input type="button", <input type="submit">, <button>
+confirm-button      | styled button that takes 2 clicks for action                | <input type="button">, <input type="submit">
 loading-circle      | simple loading indicator                                    | <div>
 title               | WebbleDash styled title                                     | <h1>, <h2>, <h3>, <h4>, <h5>, <h6>
 text                | styled text                                                 | <p>
