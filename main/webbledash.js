@@ -865,7 +865,7 @@ $( document ).ready(function () {
 
         } else if ($( this ).is( "input[type=button]" )) {
 
-            // element is a normal button
+            // element is a normal input button
 
             // change the current action to triggering the
             //   confirm action, also save the current action for later
@@ -877,6 +877,22 @@ $( document ).ready(function () {
                 $( this ).attr( "onclick", current_action );
                 $( this ).attr( "data-ddash", "confirm-button-focus" );
                 $( this ).val( "confirm" );
+            });
+
+        } else if ($( this ).is( "button" )) {
+
+            // element is a button element
+
+            // change the current action to triggering the
+            //   confirm action, also save the current action for later
+            var current_action = $( this ).attr( "onclick" );
+            $( this ).attr( "onclick", "" );
+            // change action to displaying "confirm"
+            $( this ).click(function () {
+                $( this ).off( "click" );
+                $( this ).attr( "onclick", current_action );
+                $( this ).attr( "data-ddash", "confirm-button-focus" );
+                $( this ).html( "confirm" );
             });
 
         }

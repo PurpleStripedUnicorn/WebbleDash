@@ -25,7 +25,7 @@ _For examples see [features.html](../master/exaples/features.html)_
 | checkbox            | styled checkbox in stead of browser default checkbox        | &lt;input type="checkbox"&gt;                                                                                           |
 | button              | styled button                                               | &lt;input type="button"&gt;, &lt;input type="submit"&gt;, &lt;button&gt;                                                |
 | transparent-button  | styled transparent button                                   | &lt;input type="button"&gt;, &lt;input type="submit"&gt;, &lt;button&gt;                                                |
-| confirm-button      | styled button that takes 2 clicks for action                | &lt;input type="button"&gt;, &lt;input type="submit"&gt;
+| confirm-button      | styled button that takes 2 clicks for action                | &lt;input type="button"&gt;, &lt;input type="submit"&gt;, &lt;button&gt;                                                |
 | loading-circle      | simple loading indicator                                    | &lt;div&gt;                                                                                                             |
 | title               | WebbleDash styled title                                     | &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;                                                  |
 | text                | styled text                                                 | &lt;p&gt;                                                                                                               |
