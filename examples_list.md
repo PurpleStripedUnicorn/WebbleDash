@@ -32,6 +32,7 @@ For a list of all features, see: _[List of features](https://PurpleStripedUnicor
 * Textbox
     * [accent-border.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/textbox/accent-border.html)
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/textbox/default.html)
+    * [placeholder.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/textbox/placeholder.html)
 * Title
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/title/default.html)
     * [h1.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/title/h1.html)
