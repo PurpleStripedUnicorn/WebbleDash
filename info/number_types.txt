@@ -4,7 +4,13 @@ dollar              $                               y
 euro                €                               y
 yen                 ¥                               y
 pound               £                               y
-yuan                ¤                               y
+australian-dollar   A$                              y
+canadian-dollar     C$                              y
+franc               Fr                              y
+yuan                ¥                               y
+krona               kr                              y
+new-zealand-dollar  NZ$                             y
+
 meter                               m               y
 second                              s               y
 kilogram                            kg              y
@@ -12,6 +18,10 @@ candela                             cd              y
 kelvin                              K               y
 ampere                              A               y
 mol                                 mol             y
+
 kilometer                           km              y
 mile                                miles           y
+feet                                ft              y
+foot                                ft              y
+
 thousands                                           y

@@ -284,72 +284,35 @@ function inp_number_transform (element) {
         // TEMPLATE:   name: [before_string, after_string]
         var types = {
 
-            // currencies
-            dollar: {
-                before: "$",
-                thousands: true
-            },
-            euro: {
-                before: "€",
-                thousands: true
-            },
-            yen: {
-                before: "¥",
-                thousands: true
-            },
-            pound: {
-                before: "£",
-                thousands: true
-            },
-            yuan: {
-                before: "¤",
-                thousands: true
-            },
+            // 10 most traded currencies
+            "dollar": { before: "$", thousands: true },
+            "euro": { before: "€", thousands: true },
+            "yen": { before: "¥", thousands: true },
+            "pound": { before: "£", thousands: true },
+            "australian-dollar": { before: "A$", thousands: true },
+            "canadian-dollar": { before: "C$", thousands: true },
+            "franc": { before: "Fr", thousands: true },
+            "yuan": { before: "¤", thousands: true },
+            "krona": { before: "kr", thousands: true },
+            "new-zealand-dollar": { before: "NZ$", thousands: true },
 
             // SI base units
-            meter: {
-                after: "m",
-                thousands: true
-            },
-            second: {
-                after: "s",
-                thousands: true
-            },
-            kilogram: {
-                after: "kg",
-                thousands: true
-            },
-            candela: {
-                after: "cd",
-                thousands: true
-            },
-            kelvin: {
-                after: "K",
-                thousands: true
-            },
-            ampere: {
-                after: "A",
-                thousands: true
-            },
-            mol: {
-                after: "mol",
-                thousands: true
-            },
+            "meter": { after: "m", thousands: true },
+            "second": { after: "s", thousands: true },
+            "kilogram": { after: "kg", thousands: true },
+            "candela": { after: "cd", thousands: true },
+            "kelvin": { after: "K", thousands: true },
+            "ampere": { after: "A", thousands: true },
+            "mol": { after: "mol", thousands: true },
 
             // units for distance
-            kilometer: {
-                after: "km",
-                thousands: true
-            },
-            mile: {
-                after: "miles",
-                thousands: true
-            },
+            "kilometer": { after: "km", thousands: true },
+            "mile": { after: "miles", thousands: true },
+            "foot": { after: "ft", thousands: true },
+            "feet": { after: "ft", thousands: true },
 
             // only adding thousand separators
-            thousands: {
-                thousands: true
-            }
+            "thousands": { thousands: true }
 
         };
 
