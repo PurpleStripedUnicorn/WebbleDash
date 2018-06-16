@@ -15,6 +15,7 @@ For a list of all features, see: _[List of features](https://PurpleStripedUnicor
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/button/default.html)
 * Checkbox
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/checkbox/default.html)
+    * [large.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/checkbox/large.html)
 * Confirm button
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/confirm-button/default.html)
 * Inline quote
@@ -23,13 +24,21 @@ For a list of all features, see: _[List of features](https://PurpleStripedUnicor
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/large-quote/default.html)
 * Loading circle
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/loading-circle/default.html)
+    * [large.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/loading-circle/large.html)
 * Switch
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/switch/default.html)
 * Text
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/text/default.html)
 * Textbox
+    * [accent-border.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/textbox/accent-border.html)
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/textbox/default.html)
 * Title
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/title/default.html)
+    * [h1.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/title/h1.html)
+    * [h2.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/title/h2.html)
+    * [h3.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/title/h3.html)
+    * [h4.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/title/h4.html)
+    * [h5.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/title/h5.html)
+    * [h6.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/title/h6.html)
 * Transparent button
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/transparent-button/default.html)
