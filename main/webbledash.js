@@ -317,10 +317,30 @@ function inp_number_transform (element) {
             "mol": { after: "mol", thousands: true },
 
             // units for distance
+            "micrometer": { after: "µm", thousands: true },
+            "millimeter": { after: "mm", thousands: true },
+            "centimeter": { after: "cm", thousands: true },
+            "decimeter": { after: "dm", thousands: true },
             "kilometer": { after: "km", thousands: true },
             "mile": { after: "miles", thousands: true },
             "foot": { after: "ft", thousands: true },
             "feet": { after: "ft", thousands: true },
+            "inch": { after: "in", thousands: true },
+
+            // units of digital size
+            "byte": { after: "B", thousands: true },
+            "kilobyte": { after: "KB", thousands: true },
+            "megabyte": { after: "MB", thousands: true },
+            "gigabyte": { after: "GB", thousands: true },
+            "terabyte": { after: "TB", thousands: true },
+            "petabyte": { after: "PB", thousands: true },
+
+            "bit": { after: "b", thousands: true },
+            "kilobit": { after: "Kb", thousands: true },
+            "megabit": { after: "Mb", thousands: true },
+            "gigabit": { after: "Gb", thousands: true },
+            "terabit": { after: "Tb", thousands: true },
+            "petabit": { after: "Pb", thousands: true },
 
             // only adding thousand separators
             "thousands": { thousands: true }
