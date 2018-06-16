@@ -284,8 +284,9 @@ function inp_number_transform (element) {
         // TEMPLATE:   name: [before_string, after_string]
         var types = {
 
-            // 10 most traded currencies
-            "dollar": { before: "$", thousands: true },
+            // 20 most traded currencies
+            "dollar": { before: "$", thousands: true }, /* basic dollar symbol */
+            "us-dollar": { before: "US$", thousands: true }, /* actual us dollars */
             "euro": { before: "€", thousands: true },
             "yen": { before: "¥", thousands: true },
             "pound": { before: "£", thousands: true },
@@ -295,6 +296,16 @@ function inp_number_transform (element) {
             "yuan": { before: "¤", thousands: true },
             "krona": { before: "kr", thousands: true },
             "new-zealand-dollar": { before: "NZ$", thousands: true },
+            "peso": { before: "$", thousands: true },
+            "singapore-dollar": { before: "S$", thousands: true },
+            "hong-kong-dollar": { before: "HK$", thousands: true },
+            "norwegian-krone": { before: "kr", thousands: true },
+            "won": { before: "₩", thousands: true },
+            "lira": { before: "₺", thousands: true },
+            "ruble": { before: "₽", thousands: true },
+            "rupee": { before: "₹", thousands: true },
+            "real": { before: "R$", thousands: true },
+            "rand": { before: "R", thousands: true },
 
             // SI base units
             "meter": { after: "m", thousands: true },
