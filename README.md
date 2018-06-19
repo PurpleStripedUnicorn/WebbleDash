@@ -53,3 +53,4 @@ _see [features.html](../master/examples/features.html) for more examples_
 | title               | WebbleDash styled title                                  |
 | text                | styled text                                              |
 | confirm-button      | styled button which performs action on second click      |
+| profile-picture     | styled profile picture                                   |

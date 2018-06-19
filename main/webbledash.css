@@ -727,6 +727,33 @@ h6[data-ddash=title] {
 
 
 
+/* profile pictures */
+[data-ddash=profile-picture] {
+    display: block;
+    border-radius: 3px;
+    background-color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/* svg version */
+svg[data-ddash=profile-picture] {
+    padding: 17%;
+    background-color: #dfdfdf;
+}
+svg[data-ddash=profile-picture] path,
+svg[data-ddash=profile-picture] circle {
+    fill: #b6b6b6;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

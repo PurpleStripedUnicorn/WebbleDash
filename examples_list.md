@@ -25,6 +25,8 @@ For a list of all features, see: _[List of features](https://PurpleStripedUnicor
 * Loading circle
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/loading-circle/default.html)
     * [large.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/loading-circle/large.html)
+* Profile picture
+    * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/profile-picture/default.html)
 * Switch
     * [default.html](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/elements/switch/default.html)
 * Text

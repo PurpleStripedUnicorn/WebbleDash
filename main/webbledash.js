@@ -947,6 +947,53 @@ $( document ).ready(function () {
 
 
 
+    // -----
+    // profile pictures
+    // -----
+    d( "profile-picture", "img" ).each(function () {
+
+        // check if second color or main color should be used (not used)
+        // var sc = $( this ).is("[data-wdash-second-color]");
+        // var tc = (sc ? second_theme_color : theme_color);
+
+        // add ddash to element
+        $( this ).attr( "data-ddash", "profile-picture" );
+
+        // get the size of element (if given)
+        // first, set the default size
+        var size = 30;
+        // check if the size is given and valid
+        if (
+            $( this ).attr( "data-wdash-prop-size" ) > 5 &&
+            $( this ).attr( "data-wdash-prop-size" ) < 400
+        ) {
+            // set the new size
+            size = $( this ).attr( "data-wdash-prop-size" );
+        }
+        // set the size of the element
+        $( this ).css( "width", size+"px" );
+        $( this ).css( "height", size+"px" );
+
+        // check if the image has a source
+        // if it doesn't, add a default profile picture
+        if (!$( this ).is("[src]")) {
+            $( this ).replaceWith( '<svg viewbox="0 0 500 500" data-ddash="profile-picture" style="width: '+size+'px; height: '+size+'px;">'+
+                '<path class="mini_icon_svg" d="m 27,465 c -2,-93.5 68.5,-155 68.5,-155 149.5,142.5 282,0 282,0 69.5,61 69.5,156.5 69.5,156.5 z" />'+
+                '<circle class="mini_icon_svg" cx="236" cy="185.75" r="140" />'+
+                '</svg>' );
+        }
+
+    });
+
+
+
+
+
+
+
+
+
+
 
 
     // code afterwards

@@ -17,8 +17,9 @@ confirm-button      | styled button that takes 2 clicks for action              
 loading-circle      | simple loading indicator                                    | <div>
 title               | WebbleDash styled title                                     | <h1>, <h2>, <h3>, <h4>, <h5>, <h6>
 text                | styled text                                                 | <p>
+profile-picture     | styled profile picture                                      | <img>
 
 PROPERTY NAME       | DESCRIPTION                                                           | CAN BE USED ON (data-wdash=***)
 --------------------+-----------------------------------------------------------------------+---------------------------
-size                | used to change the Width+Height of certain webbledash objects         | checkbox, loading-circle
+size                | used to change the Width+Height of certain webbledash objects         | checkbox, loading-circle, profile-picture
 accent-border       | used to add a second border to element                                | textbox
