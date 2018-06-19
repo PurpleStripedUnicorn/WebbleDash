@@ -836,6 +836,16 @@ $( document ).ready(function () {
         // add the theme color background color
         $( this ).css( "background-color", tc );
 
+        // check if there is a confirm message set
+        if ($( this ).is( "[data-wdash-prop-confirm-message]" )) {
+            // confirm message was given
+            // change it from the default
+            var confirm_message = $( this ).attr("data-wdash-prop-confirm-message");
+        } else {
+            // default confirm message
+            var confirm_message = "confirm";
+        }
+
         // add theme color as border-color and text color
         // this only has effect when clicked once
         $( this ).css( "color", tc );
@@ -856,7 +866,7 @@ $( document ).ready(function () {
             // also change text displayed and style
             $( this ).click(function () {
                 $( this ).attr( "data-ddash", "confirm-button-focus" );
-                $( this ).val( "confirm" );
+                $( this ).val( confirm_message );
                 $( this ).attr( "type", "submit" );
             });
 
@@ -867,7 +877,7 @@ $( document ).ready(function () {
                 $( this ).attr( "type", "button" );
                 $( this ).click(function () {
                     $( this ).attr( "data-ddash", "confirm-button-focus" );
-                    $( this ).val( "confirm" );
+                    $( this ).val( confirm_message );
                     $( this ).attr( "type", "submit" );
                 });
             });
@@ -882,12 +892,12 @@ $( document ).ready(function () {
             var current_text = $( this ).val();
             $( this ).attr( "onclick", "" );
 
-            // change action to displaying "confirm"
+            // change action to displaying the confirmation message
             $( this ).click(function () {
                 $( this ).off( "click" );
                 $( this ).attr( "onclick", current_action );
                 $( this ).attr( "data-ddash", "confirm-button-focus" );
-                $( this ).val( "confirm" );
+                $( this ).val( confirm_message );
             });
 
             // change back to first button when losing focus
@@ -896,7 +906,7 @@ $( document ).ready(function () {
                     $( this ).off( "click" );
                     $( this ).attr( "onclick", current_action );
                     $( this ).attr( "data-ddash", "confirm-button-focus" );
-                    $( this ).val( "confirm" );
+                    $( this ).val( confirm_message );
                 });
                 $( this ).attr( "onclick", "" );
                 $( this ).attr( "data-ddash", "confirm-button" );
@@ -913,12 +923,12 @@ $( document ).ready(function () {
             var current_text = $( this ).html();
             $( this ).attr( "onclick", "" );
 
-            // change action to displaying "confirm"
+            // change action to displaying the confirmation message
             $( this ).click(function () {
                 $( this ).off( "click" );
                 $( this ).attr( "onclick", current_action );
                 $( this ).attr( "data-ddash", "confirm-button-focus" );
-                $( this ).html( "confirm" );
+                $( this ).html( confirm_message );
             });
 
             // change back to first button when losing focus
@@ -927,7 +937,7 @@ $( document ).ready(function () {
                     $( this ).off( "click" );
                     $( this ).attr( "onclick", current_action );
                     $( this ).attr( "data-ddash", "confirm-button-focus" );
-                    $( this ).html( "confirm" );
+                    $( this ).html( confirm_message );
                 });
                 $( this ).attr( "onclick", "" );
                 $( this ).attr( "data-ddash", "confirm-button" );

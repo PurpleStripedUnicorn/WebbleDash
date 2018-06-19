@@ -37,3 +37,4 @@ _For examples see [features.html](../master/exaples/features.html)_
 | ------------------- | --------------------------------------------------------------------- | --------------------------------- |
 | size                | used to change the Width+Height of certain webbledash objects         | checkbox, loading-circle, profile-picture |
 | accent-border       | used to add a second border to element                                | textbox                           |
+| confirm-message     | used to change the confirmation message of a button that needs confirmation | confirm-button              |
