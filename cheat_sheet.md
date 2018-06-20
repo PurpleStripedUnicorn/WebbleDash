@@ -12,7 +12,7 @@ To set a property op the object:
 <html-tag data-wdash-prop-PROPERTYNAME="PROPERTYVALUE">
 ```
 
-_For examples see [features.html](../master/exaples/features.html)_
+_For examples see [the examples folder](../master/examples)_
 
 ## Elements
 

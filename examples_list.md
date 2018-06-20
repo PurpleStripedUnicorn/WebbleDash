@@ -1,7 +1,5 @@
 # List of WebbleDash examples
 
-For a list of all features, see: _[List of features](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/features.html)_
-
 ## Combined examples
 
 * [Basic article](https://PurpleStripedUnicorn.github.io/WebbleDash/examples/article.html) \(_[code](../master/examples/article.html)_\)

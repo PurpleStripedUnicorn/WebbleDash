@@ -36,8 +36,6 @@ _see [cheat_sheet.md](../master/cheat_sheet.md) for more info_
 </span>
 ```
 
-_see [features.html](../master/examples/features.html) for more examples_
-
 ## List of features
 
 | Element name        | Description                                              |
