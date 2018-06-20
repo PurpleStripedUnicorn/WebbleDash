@@ -182,7 +182,129 @@ this is the style for when the JavaScript/jQuery is not fully executed yet
 
 
 
+/* profile pictures */
 [data-wdash=profile-picture]:not([data-ddash=profile-picture]) {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Large quote */
+[data-wdash=large-quote]:not([data-ddash=large-quote]) {
+    margin: 3em 0;
+    font-size: 1.2em;
+    color: grey;
+    font-family: serif !important;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+/* inline quote */
+[data-wdash=inline-quote]:not([data-ddash=inline-quote]) {
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 900px;
+    color: #808080; /* make text grey to make it stand out */
+    text-align: center;
+    display: inline-block;
+    font-family: serif !important; /* beautify the text by making it serif */
+    font-style: italic;
+    color: #b0b0b0;
+}
+
+
+
+
+
+
+
+
+
+
+/* text */
+[data-wdash=text]:not([data-ddash=text]) {
+    font-size: 1.05em;
+    margin: .15em;
+    line-height: 164%;
+}
+[data-wdash=text]:not([data-ddash=text]) + [data-wdash=text]:not([data-ddash=text]) {
+    margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+/* title */
+/* main title */
+h1[data-wdash=title]:not([data-ddash=title]) {
+    font-size: 2.7em;
+    margin: .5em 0 .5em 0;
+    padding: .2em 0;
+    text-align: center;
+    background-color: #e9e9e9;
+    color: #808080;
+    border-radius: .1em;
+}
+/* subtitles */
+h2[data-wdash=title]:not([data-ddash=title]) {
+    font-size: 1.5em;
+    margin: 1.3em 0 .6em 0;
+}
+/* smaller title */
+h3[data-wdash=title]:not([data-ddash=title]) {
+    font-size: 1.25em;
+    margin: 1.1em 0 .6em 0;
+}
+/* h4 title */
+h4[data-wdash=title]:not([data-ddash=title]) {
+    font-size: 1.11em;
+    margin: .95em 0 .6em 0;
+}
+/* h5 title */
+h5[data-wdash=title]:not([data-ddash=title]) {
+    font-size: 1em;
+    margin: .95em 0 .6em 0;
+}
+/* h6 title */
+h6[data-wdash=title]:not([data-ddash=title]) {
+    font-size: 1em;
+    margin: .95em 0 .6em 0;
+    color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+/* loading circle */
+[data-wdash=loading-circle]:not([data-ddash=loading-circle]) {
     display: none;
 }
 
