@@ -988,8 +988,8 @@ $( document ).ready(function () {
         // if it doesn't, add a default profile picture
         if (!$( this ).is("[src]")) {
             $( this ).replaceWith( '<svg viewbox="0 0 500 500" data-ddash="profile-picture" style="width: '+size+'px; height: '+size+'px;">'+
-                '<path class="mini_icon_svg" d="m 27,465 c -2,-93.5 68.5,-155 68.5,-155 149.5,142.5 282,0 282,0 69.5,61 69.5,156.5 69.5,156.5 z" />'+
-                '<circle class="mini_icon_svg" cx="236" cy="185.75" r="140" />'+
+                '<path d="m 27,465 c -2,-93.5 68.5,-155 68.5,-155 149.5,142.5 282,0 282,0 69.5,61 69.5,156.5 69.5,156.5 z" />'+
+                '<circle cx="236" cy="185.75" r="140" />'+
                 '</svg>' );
         }
 
