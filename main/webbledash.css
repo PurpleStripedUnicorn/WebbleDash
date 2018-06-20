@@ -182,6 +182,19 @@ this is the style for when the JavaScript/jQuery is not fully executed yet
 
 
 
+[data-wdash=profile-picture]:not([data-ddash=profile-picture]) {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
