@@ -435,7 +435,7 @@ function inp_number_transform (element) {
 // -----
 
 // function for when the document is loaded
-$( document ).ready(function () {
+$(function () {
 
     // -----
     // preload
