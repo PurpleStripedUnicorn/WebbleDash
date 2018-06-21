@@ -342,6 +342,19 @@ function inp_number_transform (element) {
             "terabit": { after: "Tb", thousands: true },
             "petabit": { after: "Pb", thousands: true },
 
+            "kibibyte": { after: "KiB", thousands: true },
+            "mebibyte": { after: "MiB", thousands: true },
+            "gibibyte": { after: "GiB", thousands: true },
+            "tebibyte": { after: "TiB", thousands: true },
+            "pebibyte": { after: "PiB", thousands: true },
+
+            "kibibit": { after: "Kib", thousands: true },
+            "mebibit": { after: "Mib", thousands: true },
+            "gibibit": { after: "Gib", thousands: true },
+            "tebibit": { after: "Tib", thousands: true },
+            "pebibit": { after: "Pib", thousands: true },
+
+
             // only adding thousand separators
             "thousands": { thousands: true }
 
