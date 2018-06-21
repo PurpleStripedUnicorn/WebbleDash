@@ -29,7 +29,8 @@ _For examples see [the examples folder](../master/examples)_
 | loading-circle      | simple loading indicator                                    | &lt;div&gt;                                                                                                             |
 | title               | WebbleDash styled title                                     | &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;                                                  |
 | text                | styled text                                                 | &lt;p&gt;                                                                                                               |
-| profile-picture     | styled profile picture                                      | &lt;img&gt;                                                                                                               |
+| profile-picture     | styled profile picture                                      | &lt;img&gt;                                                                                                             |
+| panorama-title      | Large image with title in front of it                       | &lt;img&gt;                                                                                                             |
 
 ## Properties
 

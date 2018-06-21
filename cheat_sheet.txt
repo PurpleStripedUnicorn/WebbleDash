@@ -18,6 +18,7 @@ loading-circle      | simple loading indicator                                  
 title               | WebbleDash styled title                                     | <h1>, <h2>, <h3>, <h4>, <h5>, <h6>
 text                | styled text                                                 | <p>
 profile-picture     | styled profile picture                                      | <img>
+panorama-title      | Large image with title in front of it                       | <img>
 
 PROPERTY NAME       | DESCRIPTION                                                                 | CAN BE USED ON (data-wdash=***)
 --------------------+-----------------------------------------------------------------------------+---------------------------------------------

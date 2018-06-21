@@ -52,3 +52,4 @@ _see [cheat_sheet.md](../master/cheat_sheet.md) for more info_
 | text                | styled text                                              |
 | confirm-button      | styled button which performs action on second click      |
 | profile-picture     | styled profile picture                                   |
+| panorama-title      | large image with title in front of it                    |
