@@ -962,10 +962,6 @@ $( document ).ready(function () {
     // -----
     d( "profile-picture", "img" ).each(function () {
 
-        // check if second color or main color should be used (not used)
-        // var sc = $( this ).is("[data-wdash-second-color]");
-        // var tc = (sc ? second_theme_color : theme_color);
-
         // add ddash to element
         $( this ).attr( "data-ddash", "profile-picture" );
 
@@ -992,6 +988,115 @@ $( document ).ready(function () {
                 '<circle cx="236" cy="185.75" r="140" />'+
                 '</svg>' );
         }
+
+    });
+
+
+
+
+
+
+
+
+
+
+    // -----
+    // panorama title
+    // -----
+    d( "panorama-title", "img" ).each(function () {
+
+        // check if second color or main color should be used
+        var sc = $( this ).is("[data-wdash-second-color]");
+        var tc = (sc ? second_theme_color : theme_color);
+
+        // add ddash to element
+        $( this ).attr( "data-ddash", "panorama-title" );
+
+        // wrap the element with a container
+        $( this ).wrap( "<div data-ddash='panorama-title-container'></div>" );
+
+        // define the parent element (container)
+        var p = $( this ).parent();
+
+        // set the background color of the container to the theme color
+        p.css( "background-color", tc );
+
+        // add the title text to the element container
+        // first, check if text is given
+        if ($( this ).is( "[data-wdash-prop-text]" )) {
+            // text is given, so add text to the container
+            p.append(
+                "<h1>" +
+                $( this ).attr( "data-wdash-prop-text" ) +
+                "</h1>"
+            );
+        }
+
+        // if there is no image source given, don't show image
+        // if there is one given, first add background to container
+        //   then remove the element
+        if (!$( this ).is( "[src]" )) {
+
+            // directly destroy element
+            $( this ).remove();
+
+        } else {
+
+            // add background to container
+            p.css( "background-image", "url('" + $( this ).attr("src") + "')" );
+
+            // remove element
+            $( this ).remove();
+
+        }
+
+        // make the container element ignore:
+        // - padding of all elements
+        // - margin of body
+        var margin_left = 0;
+        var margin_right = 0;
+        var margin_top = 0;
+        if (p.parent().is( "body" )) {
+
+            // body element
+
+            // left margin
+            margin_left = 0
+                - parseInt( p.parent().css("margin-left") )
+                - parseInt( p.parent().css("padding-left") );
+
+            // right margin
+            margin_right = 0
+                - parseInt( p.parent().css("margin-right") )
+                - parseInt( p.parent().css("padding-right") );
+
+            // also check if the element is the first in the document
+            // if so, also account the margin at the top
+            margin_top = 0
+                - parseInt( p.parent().css("margin-top") )
+                - parseInt( p.parent().css("padding-top") );
+
+        } else {
+
+            // all other elements
+
+            // margin left
+            margin_left = 0
+                - parseInt( p.parent().css("padding-left") );
+
+            // margin right
+            margin_right = 0
+                - parseInt( p.parent().css("padding-right") );
+
+        }
+
+        // add negative margin to the container
+        p.css( "margin-left", margin_left + "px" );
+        p.css( "margin-right", margin_right + "px" );
+        p.css( "margin-top", margin_top + "px" );
+
+        // change the width so it covers the entire screen
+        p.css( "width", "calc(100% + " + (- margin_left - margin_right) + "px)" );
 
     });
 
