@@ -242,6 +242,8 @@ this is the style for when the JavaScript/jQuery is not fully executed yet
     font-size: 1.05em;
     margin: .15em;
     line-height: 164%;
+    font-family: sans-serif;
+    font-display: swap;
 }
 [data-wdash=text]:not([data-ddash=text]) + [data-wdash=text]:not([data-ddash=text]) {
     margin-top: 1em;
@@ -257,6 +259,11 @@ this is the style for when the JavaScript/jQuery is not fully executed yet
 
 
 /* title */
+/* all titles */
+[data-wdash=title]:not([data-ddash=title]) {
+    font-family: sans-serif;
+    font-display: swap;
+}
 /* main title */
 h1[data-wdash=title]:not([data-ddash=title]) {
     font-size: 2.7em;
@@ -306,6 +313,28 @@ h6[data-wdash=title]:not([data-ddash=title]) {
 /* loading circle */
 [data-wdash=loading-circle]:not([data-ddash=loading-circle]) {
     display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*  */
+[data-wdash=panorama-title]:not([data-ddash=panorama-title]) {
+    position: relative;
+    width: 100%;
+    height: 87vh;
+    max-height: 600px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    background-color: lightgrey;
 }
 
 
@@ -676,6 +705,7 @@ This is to only let the script decide which elements are valid for usage
     font-size: 1.05em;
     margin: .15em;
     line-height: 164%;
+    font-display: swap;
 }
 [data-ddash=text] + [data-ddash=text] {
     margin-top: 1em;
@@ -785,6 +815,10 @@ This is to only let the script decide which elements are valid for usage
 
 
 /* titles */
+/* all titles */
+[data-ddash=title] {
+    font-display: swap;
+}
 /* main title */
 h1[data-ddash=title] {
     font-size: 2.7em;
@@ -895,6 +929,7 @@ svg[data-ddash=profile-picture] circle {
     position: relative;
     width: 100%;
     height: 87vh;
+    max-height: 600px;
     overflow: hidden;
     background-size: cover;
     background-position: center;
