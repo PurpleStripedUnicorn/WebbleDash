@@ -1,3 +1,9 @@
+---
+name: Bug report
+about: Report a bug in the script or styling
+
+---
+
 _Please report the found bug in the following steps:_
 
 1. First, describe if the bug has to do with __style of the object__ or the __mechanics of the object__
