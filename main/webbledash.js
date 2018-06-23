@@ -543,6 +543,9 @@ $(function () {
             } );
         }
 
+        // check if the textbox already has a value or not
+        check_textbox_inp($( this ));
+
     });
 
 
