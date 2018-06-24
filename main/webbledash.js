@@ -154,7 +154,7 @@ function check_for_charset () {
 
     // check if meta object exists with charset utf 8
     var complete = false;
-    $( "meta" ).each(function () {
+    $( "meta[charset]" ).each(function () {
         if ( $( this ).attr( "charset" ).toLowerCase() === "utf-8" ) {
             // object with right charset was found
             // set complete to true
