@@ -546,6 +546,12 @@ $(function () {
         // check if the textbox already has a value or not
         check_textbox_inp($( this ));
 
+        // check if textbox has autofocus attached
+        // if so, focus the textbox right now
+        if ($( this ).is("[autofocus]")) {
+            $( this ).focus();
+        }
+
     });
 
 
