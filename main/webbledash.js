@@ -727,7 +727,7 @@ $(function () {
     // -----
     // button
     // -----
-    d( "button", "input[type=submit],input[type=button],button" ).each(function () {
+    d( "button", "input[type=submit],input[type=button],button,a" ).each(function () {
 
         // check if second color or main color should be used
         var sc = $( this ).is("[data-wdash-second-color]");
@@ -753,7 +753,7 @@ $(function () {
     // -----
     // transparent button
     // -----
-    d( "transparent-button", "input[type=submit],input[type=button],button" ).each(function () {
+    d( "transparent-button", "input[type=submit],input[type=button],button,a" ).each(function () {
 
         // add ddash property to the element
         // to make it accessible from css

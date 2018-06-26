@@ -11,8 +11,8 @@ large-quote         | styled large quote in the middle of the screen            
 inline-quotes       | styled small inline quote                                   | <span>
 switch              | styled switch in stead of checkbox                          | <input type="checkbox">
 checkbox            | styled checkbox in stead of browser default checkbox        | <input type="checkbox">
-button              | styled button                                               | <input type="button">, <input type="submit">, <button>
-transparent-button  | styled transparent button                                   | <input type="button">, <input type="submit">, <button>
+button              | styled button                                               | <input type="button">, <input type="submit">, <button>, <a>
+transparent-button  | styled transparent button                                   | <input type="button">, <input type="submit">, <button>, <a>
 confirm-button      | styled button that takes 2 clicks for action                | <input type="button">, <input type="submit">, <button>
 loading-circle      | simple loading indicator                                    | <div>
 title               | WebbleDash styled title                                     | <h1>, <h2>, <h3>, <h4>, <h5>, <h6>
