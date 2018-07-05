@@ -52,7 +52,8 @@ function d (name, elements /* elements are optional */) {
         var result_elements = "";
         for (i = 0; i < elements_list.length; i++) {
             // add element and name to list
-            result_elements += ","+elements_list[i]+"[data-wdash="+name+"]";
+            // exclude element that have already been processes (ddash elements)
+            result_elements += ","+elements_list[i]+"[data-wdash="+name+"]:not([data-ddash="+name+"])";
         }
 
         // remove the first comma in the result_elements string, added in the first iteration of the for loop
@@ -65,7 +66,8 @@ function d (name, elements /* elements are optional */) {
 
         // no elements given, just return
         // return the elements with the property wdash as the name of the input
-        return $("[data-wdash="+name+"]");
+        // exclude element that have already been processes (ddash elements)
+        return $("[data-wdash="+name+"]:not([data-ddash="+name+"])");
 
     }
 
@@ -435,7 +437,7 @@ function inp_number_transform (element) {
 // -----
 
 // function for when the document is loaded
-$(function () {
+function wdash_process () {
 
     // -----
     // preload
@@ -1143,4 +1145,22 @@ $(function () {
 
 
 
+};
+
+// execute the function defined before when the document has loaded
+$(function () {
+    wdash_process();
 });
+
+
+
+
+
+// -----
+// functions the user can use
+// -----
+
+// function for updating all webbledash elements that aren't processed yet
+function wdash_update () {
+    wdash_process();
+}
